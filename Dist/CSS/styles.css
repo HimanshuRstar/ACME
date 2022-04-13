@@ -1,0 +1,287 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #F0F2F7;
+}
+
+.side_bar {
+    background: #3b91f7;
+    /* position: relative;
+    height: 100%; */
+}
+
+.side_bar .profile {
+    display: none;
+}
+
+ul li {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-left: 65px;
+    margin-top: 10px;
+}
+
+/* ul li:hover {
+    background-color: #1d487b;
+    cursor: pointer;
+} */
+
+
+ul li a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.profile i {
+    font-size: 15px;
+}
+
+.header {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.card1 {
+    background: #2a6cbe;
+    color: #fff;
+}
+
+.card2 {
+    background: #67ac5b;
+    color: #fff;
+}
+
+.card3 {
+    color: #fff;
+    background: #ef993d;
+}
+
+.card4 {
+    background: #3b91f7;
+    color: #fff;
+}
+
+.cards {
+    margin-top: 10px;
+    margin-bottom: 90px;
+}
+
+
+@media (max-width:768px) {
+
+    /* body {
+        overflow-y: hidden;
+    } */
+
+    .pics {
+        display: none;
+    }
+
+    .side_bar {
+        width: 392px;
+    }
+
+    .side_bar .profile {
+        display: flex;
+    }
+
+    .service {
+        display: none;
+    }
+
+    .cards {
+        height: 700px;
+        margin-bottom: 10px;
+    }
+
+    .body2 {
+        position: absolute;
+        right: 0;
+        top: 8%;
+        z-index: -1;
+        /* margin-top: 60px; */
+    }
+
+    .profile {
+        display: none;
+    }
+
+    .profile i {
+        margin-top: 5px;
+    }
+
+    .welcome {
+        background: #343332;
+        color: #fff;
+        font-size: 13px;
+    }
+
+    .navbar {
+        background: #fff;
+    }
+
+    .welcome p:nth-child(1) {
+        font-weight: bolder;
+        margin-bottom: -10px;
+        font-size: 15px;
+    }
+
+    .navbar button {
+        margin-left: 10px;
+    }
+
+
+}
+
+.logo {
+    display: list-item;
+    align-items: center;
+    color: #123bff;
+    padding: 30px 0 0 30px;
+    background: #fff;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    margin-top: 70px;
+    /* margin-left: 30px; */
+    width: 285px;
+}
+
+.pic1 {
+    height: 570px;
+}
+
+.first_item {
+    margin-top: 50px;
+}
+
+.pic4 {
+    height: 246px;
+    width: 97%;
+    margin-top: 20px;
+}
+
+.pic2 {
+    height: 300px;
+    width: 97%;
+}
+
+.pic3 {
+    height: 300px;
+    width: 93%;
+}
+
+
+th,
+td {
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+    height: 60px;
+}
+
+.last_item {
+    margin-bottom: 300px;
+}
+
+.textover1 {
+    position: relative;
+}
+
+.textover1 figcaption {
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    padding: 30px;
+    border-radius: 5px;
+    /* text-align: center; */
+}
+
+.textover2 {
+    position: relative;
+}
+
+.textover2 figcaption {
+    font-size: 20px;
+    position: absolute;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    top: 7%;
+    left: 47%;
+    height: 93%;
+    width: 50%;
+    border-radius: 5px;
+    padding-top: 70px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.pics .row {
+    height: 300px;
+}
+
+.textover3 {
+    position: relative;
+}
+
+.textover3 figcaption {
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    width: 93%;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.textover4 {
+    position: relative;
+}
+
+.textover4 figcaption {
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    width: 97%;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.convert_order {
+    background: #1d487b;
+    margin-left: 300px;
+}
+
+.quotes_list {
+    border: 1px solid #c6dffd;
+    background: #ebf4ff;
+}
+
+.info {
+    color: #82b9fa;
+}
