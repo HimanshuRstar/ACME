@@ -13,7 +13,7 @@ body {
     display: none;
 }
 
-ul li {
+.side_bar ul li {
     /* position: relative; */
     display: flex;
     align-items: center;
@@ -284,4 +284,9 @@ td {
 
 .info {
     color: #82b9fa;
+}
+
+.pagination {
+    margin-left: 100px;
+    margin-bottom: 100px;
 }
