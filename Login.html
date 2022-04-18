@@ -24,8 +24,8 @@
           <img src="Dist/Images/6365050634796510294047124.jpg" class="img-fluid" alt="logo" />
         </div>
 
-        <form name="myForm" class="rounded bg-white shadow p-5 main-form" id="form" onsubmit="return validateForm()"
-          action="/Dashboard.html">
+        <form name="myForm" class="rounded bg-white shadow p-5 main-form needs-validation" id="form"
+          onsubmit="return validateForm()" action="/Dashboard.html" novalidate>
 
           <h3 class="text-dark fw-bolder fs-4 mb-2">Sign in to ACME</h3>
           <div class="fw-normal text-muted mb-4">
@@ -33,16 +33,21 @@
           </div>
           <div class="mb-3">
 
-            <label for="validationCustom01" class="form-label">Email Address</label>
+            <label for="validationCustom01" class="form-label">Email</label>
             <div class="input-group has-validation eMail">
-              <input type="email" name="email" class="form-control" aria-describedby="emailHelp" id="email" required>
+              <input type="text" class="form-control email_validate" id="validationCustom01" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
             </div>
-
           </div>
 
           <div class="mb-3 passWord">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" name="password" class="form-control" id="password" autocomplete="off" required>
+            <label for="validationCustom02" class="form-label">Password</label>
+            <input type="password" class="form-control pass_validate" id="validationCustom01" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
 
           </div>
 
@@ -69,6 +74,27 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+  <script>
+    (function () {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+  </script>
 </body>
 
 </html>
