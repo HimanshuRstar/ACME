@@ -65,3 +65,7 @@ body {
     right: 790px;
     visibility: hidden;
 }
+
+.email-validation {
+    display: none;
+}

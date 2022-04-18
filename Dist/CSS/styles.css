@@ -22,6 +22,7 @@ body {
     margin-top: 10px;
 }
 
+
 /* ul li:hover {
     background-color: #1d487b;
     cursor: pointer;
@@ -289,4 +290,71 @@ td {
 .pagination {
     margin-left: 100px;
 
+}
+
+.add_quote {
+    background: #1a4679;
+    color: #fff;
+}
+
+.modal_quotes {
+    font-size: 14px;
+}
+
+
+.select-field input {
+    outline: none;
+    border: none;
+}
+
+.multi-selector {
+    width: max-content;
+}
+
+.select-field {
+    border: 1px solid rgb(187, 187, 187);
+}
+
+.select-field,
+.task,
+.list_products {
+    width: 100%;
+    background-color: white;
+    padding: 0.3rem;
+}
+
+.list_products {
+    box-shadow: 0 30px 60px rgb(0, 0, 0, 0.2);
+    display: none;
+}
+
+.down-arrow {
+    font-size: 1.2rem;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.task {
+    display: block;
+    padding-left: 0;
+}
+
+.task span {
+    float: right;
+    font-size: 0.6rem;
+    padding-top: 6px;
+}
+
+.task:hover {
+    background-color: aliceblue;
+}
+
+/* 
+.show {
+    display: block;
+} */
+
+.rotate180 {
+    transform: rotate(-60deg);
 }

@@ -98,106 +98,79 @@
                 </nav>
                 <div class="container-fluid bg-white mt-5">
                     <div class="row">
-                        <div class="col-md-8 pt-3 info_quotes">
-                            <b> Quotes</b>
-                            <br>
-                            <p class="pt-2">Accounts test for community</p>
+                        <div class="col-md-8 pt-3 address">
+                            <p>{Street Address} <br>
+                                {City, ST, ZIP} <br>
+                                Phone: {000-000-0000} <br>
+                                Fax: {000-000-0000} <br>
+                                Prepared by: {Salesperson Name}
+                            </p>
                         </div>
-                        <div class="col-md-4 mt-1 pt-3">
-                            <button type="button" class="btn btn-primary convert_order">Convert to Order</button>
+                        <div class="col-md-2 mt-1 pt-3">
+                            <p> Date: <br>
+                                Quote #: <br>
+                                Customer ID: <br>
+                                Valid Until: <br>
+                            </p>
                         </div>
-                    </div>
-                    <div class="container-fluid quotes_list">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <span>Name:</span><br>
-                                <span class="info fw-bolder">Greene LLC</span>
-                            </div>
-                            <div class="col-md-3">
-                                <span>Account Name:</span><br>
-                                <span class="info fw-bolder">Greene</span>
-                            </div>
-                            <div class="col-md">
-                                <span>Stage:</span><br>
-                                <span class="info fw-bolder">Committed</span>
-                            </div>
-                        </div>
-                        <div class="row pt-3">
-                            <div class="col-md-3">
-                                <span>Owner ID:</span><br>
-                                <span class="info fw-bolder">Kian Doyle</span>
-                            </div>
-                            <div class="col-md-3">
-                                <span>Oracle Creation Date:</span><br>
-                                <span class="info fw-bolder">10/12/2020</span>
-                            </div>
+                        <div class="col-md-2 mt-1 pt-3">
+                            <p class="fw-bold">
+                                12/15/2020 <br>
+                                {123456} <br>
+                                {123} <br>
+                                1/14/2011
+                            </p>
                         </div>
                     </div>
+                    <div class="container-fluid">
+                        <div class="row mt-3">
+                            <div class="col-md-4">
+                                <p>
+                                    <b class="text-primary fs-5">Customer:</b> <br>
+                                    {Name} <br>
+                                    {Company Address} <br>
+                                    {Street Address} <br>
+                                    {City, ST ZIP} <br>
+                                    {Phone} <br>
+                                </p>
+                            </div>
+                        </div>
 
-                    <div class="mt-4 fw-bold">Related Products</div>
-                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0"
-                        class="scrollspy-example" tabindex="0">
-                        <table class="table table-striped table-bordered table_quotes" width="100%">
+                        <table class="table table-bordered table_add">
                             <thead>
-                                <tr>
-                                    <th scope="col">Product Name</th>
-                                    <th scope="col">DESCRIPTION</th>
-                                    <th scope="col">QUANTITY</th>
-                                    <th scope="col">UNIT PRICE</th>
+                                <tr style="background-color: #1c477a; color: #fff;">
+                                    <th colspan="2">DESCRIPTION</th>
+                                    <th scope="col">TAXED</th>
+                                    <th scope="col">AMOUNT</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td scope="row">KAEC100100-R_AT1</th>
-                                    <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                    <td>20</td>
-                                    <td>$500.00</td>
+                                    <td colspan="2">{Service Fee}</td>
+                                    <td>-</td>
+                                    <td>230.00</td>
                                 </tr>
                                 <tr>
-                                    <td scope="row">KAEC100100-R_AT1</th>
-                                    <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                    <td>20</td>
-                                    <td>$500.00</td>
+                                    <td colspan="2">{Labor: 5 hours at 75$/hr}</td>
+                                    <td>-</td>
+                                    <td>375.00</td>
                                 </tr>
                                 <tr>
-                                    <td scope="row">KAEC100100-R_AT1</th>
-                                    <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                    <td>20</td>
-                                    <td>$500.00</td>
+                                    <td colspan="2">{Parts}</td>
+                                    <td>-</td>
+                                    <td>345.00</td>
                                 </tr>
                                 <tr>
-                                    <td scope="row">KAEC100100-R_AT1</th>
-                                    <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                    <td>20</td>
-                                    <td>$500.00</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">KAEC100100-R_AT1</th>
-                                    <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                    <td>20</td>
-                                    <td>$500.00</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">KAEC100100-R_AT1</th>
-                                    <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                    <td>20</td>
-                                    <td>$500.00</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">KAEC100100-R_AT1</th>
-                                    <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                    <td>20</td>
-                                    <td>$500.00</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">KAEC100100-R_AT1</th>
-                                    <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                    <td>20</td>
-                                    <td>$500.00</td>
+                                    <td colspan="2">New Client Discount.</td>
+                                    <td>-</td>
+                                    <td>-50.00</td>
                                 </tr>
 
                             </tbody>
                         </table>
+                        <div class="container-fluid">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -206,7 +179,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>
