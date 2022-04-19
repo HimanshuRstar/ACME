@@ -350,10 +350,10 @@ td {
     background-color: aliceblue;
 }
 
-/* 
+
 .show {
     display: block;
-} */
+}
 
 .rotate180 {
     transform: rotate(-60deg);

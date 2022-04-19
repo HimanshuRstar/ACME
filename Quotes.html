@@ -95,7 +95,7 @@
             </nav>
             <div class="container-fluid bg-white mt-5">
                 <div class="row">
-                    <div class="col-md-8 pt-3">
+                    <div class="col-md-6 pt-3">
                         <b> Quotes</b>
                         <br>
                         <p>Accounts test for community</p>
@@ -103,228 +103,224 @@
                     <span class="col-md-2 mt-1 pt-3">
                         <div class="dropdown">
                             <button class="btn bg-white text-black btn-secondary dropdown-toggle" type="button"
-                                id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"
+                                style="margin-left: 100%;">
                                 Filter By Status
                             </button>
                         </div>
                     </span>
-                    <span class="col-md-2 mt-1 pt-3">
+                    <span class=" col-md-2 mt-1 pt-3">
                         <button class="btn bg-white text-black btn-secondary dropdown-toggle" type="button"
-                            id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"
+                            style="margin-left: 100%;">
                             Filter By Date
                         </button>
                     </span>
-                    <div class="row p-0">
-                        <div class="col-md-10"></div>
-                        <span class="col-md-2 ">
-                            <button type="button" class="btn btn-primary float-end w-25" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal" title="Add a New Quotation">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
+                    <span class="col-md-2 mt-1 pt-3">
+                        <button type="button" class="btn btn-primary float-end w-25" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" title="Add a New Quotation">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
 
-                            <!-- Modal -->
-                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
-                                aria-labelledby="myLargeModalLabel" aria-hidden="true" id="exampleModal">
-                                <div class="modal-dialog modal-xl">
-                                    <div class="modal-content modal_quotes">
-                                        <div class="modal-header">
+                        <!-- Modal -->
+                        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+                            aria-labelledby="myLargeModalLabel" aria-hidden="true" id="exampleModal">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content modal_quotes">
+                                    <div class="modal-header">
 
-                                            <h5 class="modal-title fw-bolder text-center" id="exampleModalLabel">New
-                                                Quote
-                                            </h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
+                                        <h5 class="modal-title fw-bolder text-center" id="exampleModalLabel">New
+                                            Quote
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row bg-light fw-bold" style="margin-left: 10px;">
+                                            Quote Information
                                         </div>
-                                        <div class="modal-body">
-                                            <div class="row bg-light fw-bold" style="margin-left: 10px;">
-                                                Quote Information
+                                        <div class="row mt-4">
+                                            <div class="col-md-6 mt-1">Quote Number</div>
+                                            <div class="col-md-6">Expiration Date
+                                                <input type="date" style="margin-left: 70px;">
                                             </div>
-                                            <div class="row mt-4">
-                                                <div class="col-md-6 mt-1">Quote Number</div>
-                                                <div class="col-md-6">Expiration Date
-                                                    <input type="date" style="margin-left: 70px;">
-                                                </div>
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div class="col-md-6">*Quote Name:
+                                                <input type="text" form="form-control"
+                                                    style="width:38%; margin-left: 86px; ">
                                             </div>
-                                            <div class="row mt-5">
-                                                <div class="col-md-6">*Quote Name:
-                                                    <input type="text" form="form-control"
-                                                        style="width:38%; margin-left: 86px; ">
-                                                </div>
 
-                                                <div class="col-md-6">
-                                                    Syncing:
-                                                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel"
-                                                        value="" aria-label="..." style="margin-left: 120px;">
-                                                </div>
+                                            <div class="col-md-6">
+                                                Syncing:
+                                                <input class="form-check-input" type="checkbox" id="checkboxNoLabel"
+                                                    value="" aria-label="..." style="margin-left: 120px;">
                                             </div>
-                                            <div class="row mt-5">
-                                                <div class="col-md-2">
-                                                    Product Name:
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="multi-selector">
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div class="col-md-2">
+                                                Product Name:
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="multi-selector">
 
-                                                        <div class="select-field">
-                                                            <input type="text" name="" placeholder="Choose tasks" id=""
-                                                                class="input-selector">
-                                                            <span class="down-arrow">&blacktriangledown;</span>
-                                                        </div>
-                                                        <!---------List of checkboxes and options----------->
-                                                        <div class="list_products">
+                                                    <div class="select-field">
+                                                        <input type="text" name="" placeholder="Choose Products" id=""
+                                                            class="input-selector">
+                                                        <span class="down-arrow">&blacktriangledown;</span>
+                                                    </div>
+                                                    <!---------List of checkboxes and options----------->
+                                                    <div class="list_products">
 
-                                                            <label for="task1" class="task">
-                                                                <input type="checkbox" name="" id="task1">
-                                                                {Product 1}
-                                                            </label>
-                                                            <label for="task2" class="task">
-                                                                <input type="checkbox" name="" id="task2">
-                                                                {Product 2}
-                                                            </label>
-                                                            <label for="task3" class="task">
-                                                                <input type="checkbox" name="" id="task3">
-                                                                {Product 3}
-                                                            </label>
-                                                            <label for="task4" class="task">
-                                                                <input type="checkbox" name="" id="task4">
-                                                                {Product 4}
-                                                            </label>
-
-                                                        </div>
-
+                                                        <label for="task1" class="task">
+                                                            <input type="checkbox" name="" id="task1">
+                                                            {Product 1}
+                                                        </label>
+                                                        <label for="task2" class="task">
+                                                            <input type="checkbox" name="" id="task2">
+                                                            {Product 2}
+                                                        </label>
+                                                        <label for="task3" class="task">
+                                                            <input type="checkbox" name="" id="task3">
+                                                            {Product 3}
+                                                        </label>
+                                                        <label for="task4" class="task">
+                                                            <input type="checkbox" name="" id="task4">
+                                                            {Product 4}
+                                                        </label>
 
                                                     </div>
 
-                                                </div>
-                                                <div class="col-md-6">
-                                                    Status:
-                                                    <button class="btn btn-white border-dark dropdown-toggle text-black"
-                                                        type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                                                        aria-expanded="false"
-                                                        style="margin-left: 132px; font-size: 14px;">
-                                                        --None--
-                                                    </button>
-                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"
-                                                        style="font-size: 14px;">
-                                                        <li><a class="dropdown-item" href="#">--None--</a></li>
-                                                        <li><a class="dropdown-item" href="#">Draft</a></li>
-                                                        <li><a class="dropdown-item" href="#">Needs Review</a>
-                                                        <li><a class="dropdown-item" href="#">Needs Review</a>
-                                                        <li><a class="dropdown-item" href="#">In Review</a>
-                                                        <li><a class="dropdown-item" href="#">Approved</a>
-                                                        <li><a class="dropdown-item" href="#">Rejected</a>
-                                                        <li><a class="dropdown-item" href="#">Presented</a>
-                                                        <li><a class="dropdown-item" href="#">Accepted</a>
-                                                        <li><a class="dropdown-item" href="#">Denied</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="row mt-5">
-                                                <div class="col-md-6">
-                                                    Account Name:
-
-                                                    <button class="btn btn-white border-dark text-black dropdown-toggle"
-                                                        type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                                                        aria-expanded="false"
-                                                        style="margin-left: 78px; font-size: 14px;">
-                                                        Select
-                                                    </button>
-                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"
-                                                        style="font-size: 14px;">
-                                                        <li><a class="dropdown-item" href="#">{Account 1}</a></li>
-                                                        <li><a class="dropdown-item" href="#">{Account 2}</a>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href="#">{Account 3}</a></li>
-                                                    </ul>
 
                                                 </div>
-                                                <div class="col-md-6 d-flex">
-                                                    Description:
-                                                    <textarea role="textbox" class="form-control" maxlength="32000"
-                                                        placeholder rows="2" cols="20"
-                                                        style="width: 250px; margin-left: 100px;"></textarea>
-                                                </div>
-                                            </div>
 
-                                            <div class="row bg-light fw-bold mt-4" style="margin-left: 10px;">
-                                                Totals
                                             </div>
-                                            <div class="row mt-4">
-                                                <div class="col-md-6">
-                                                    Discount: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-                                                    &nbsp;
-                                                    &nbsp; &nbsp; 0.00%
-                                                </div>
-                                                <div class="col-md-6">
-                                                    Tax:
-                                                    <input type="text" form="form-control"
-                                                        style="width:40%; margin-left: 160px; ">
-                                                </div>
-                                            </div>
-                                            <div class="row mt-4">
-                                                <div class="col-md-6"></div>
-                                                <div class="col-md-6">Shipping and Handling:
-                                                    <input type="text" form="form-control"
-                                                        style="width:40%; margin-left: 20px; ">
-                                                </div>
-                                            </div>
-                                            <div class="row mt-4">
-                                                <div class="col-md-6"></div>
-                                                <div class="col-md-6">Grand Total:
-                                                </div>
-                                            </div>
-                                            <div class="row bg-light fw-bold mt-4" style="margin-left: 10px;">
-                                                Prepared For:
-                                            </div>
-                                            <div class="row mt-5">
-                                                <div class="col-md-6">Contact Name:
-                                                    <input type="search" form="form-control"
-                                                        style="width:40%; margin-left: 55px;"
-                                                        placeholder="Search Contacts">
-                                                </div>
-
-                                                <div class="col-md-6">
-                                                    Phone:
-                                                    <input type="text" form="form-control"
-                                                        style="width:40%; margin-left: 138px; ">
-                                                </div>
-                                            </div>
-                                            <div class="row mt-5">
-                                                <div class="col-md-6">Email:
-                                                    <input type="text" form="form-control"
-                                                        style="width:40%; margin-left: 116px;">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    Fax:
-                                                    <input type="text" form="form-control"
-                                                        style="width:40%; margin-left: 160px; ">
-                                                </div>
-                                            </div>
-                                            <div class="row bg-light fw-bold mt-4" style="margin-left: 10px;">
-                                                Address Information
-                                            </div>
-                                            <div class="row mt-5">
-                                                <div class="col-md-6">Bill to Name:
-                                                    <input type="text" form="form-control"
-                                                        style="width:40%; margin-left: 70px;">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    Ship to Name:
-                                                    <input type="text" form="form-control"
-                                                        style="width:40%; margin-left: 90px; ">
-                                                </div>
+                                            <div class="col">
+                                                Status:
+                                                <button class="btn btn-white border-dark dropdown-toggle text-black"
+                                                    type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                    aria-expanded="false" style="margin-left: 132px; font-size: 14px;">
+                                                    --None--
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"
+                                                    style="font-size: 14px;">
+                                                    <li><a class="dropdown-item" href="#">--None--</a></li>
+                                                    <li><a class="dropdown-item" href="#">Draft</a></li>
+                                                    <li><a class="dropdown-item" href="#">Needs Review</a>
+                                                    <li><a class="dropdown-item" href="#">Needs Review</a>
+                                                    <li><a class="dropdown-item" href="#">In Review</a>
+                                                    <li><a class="dropdown-item" href="#">Approved</a>
+                                                    <li><a class="dropdown-item" href="#">Rejected</a>
+                                                    <li><a class="dropdown-item" href="#">Presented</a>
+                                                    <li><a class="dropdown-item" href="#">Accepted</a>
+                                                    <li><a class="dropdown-item" href="#">Denied</a>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        <div class="row mt-5">
+                                            <div class="col-md-6">
+                                                Account Name:
+
+                                                <button class="btn btn-white border-dark text-black dropdown-toggle"
+                                                    type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                    aria-expanded="false" style="margin-left: 78px; font-size: 14px;">
+                                                    Select
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"
+                                                    style="font-size: 14px;">
+                                                    <li><a class="dropdown-item" href="#">{Account 1}</a></li>
+                                                    <li><a class="dropdown-item" href="#">{Account 2}</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">{Account 3}</a></li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="col-md-6 d-flex">
+                                                Description:
+                                                <textarea role="textbox" class="form-control" maxlength="32000"
+                                                    placeholder rows="2" cols="20"
+                                                    style="width: 250px; margin-left: 100px;"></textarea>
+                                            </div>
                                         </div>
+
+                                        <div class="row bg-light fw-bold mt-4" style="margin-left: 10px;">
+                                            Totals
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-md-6">
+                                                Discount: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                                                &nbsp;
+                                                &nbsp; &nbsp; 0.00%
+                                            </div>
+                                            <div class="col-md-6">
+                                                Tax:
+                                                <input type="text" form="form-control"
+                                                    style="width:40%; margin-left: 160px; ">
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-md-6"></div>
+                                            <div class="col-md-6">Shipping and Handling:
+                                                <input type="text" form="form-control"
+                                                    style="width:40%; margin-left: 20px; ">
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-md-6"></div>
+                                            <div class="col-md-6">Grand Total:
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light fw-bold mt-4" style="margin-left: 10px;">
+                                            Prepared For:
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div class="col-md-6">Contact Name:
+                                                <input type="search" form="form-control"
+                                                    style="width:40%; margin-left: 55px;" placeholder="Search Contacts">
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                Phone:
+                                                <input type="text" form="form-control"
+                                                    style="width:40%; margin-left: 138px; ">
+                                            </div>
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div class="col-md-6">Email:
+                                                <input type="text" form="form-control"
+                                                    style="width:40%; margin-left: 116px;">
+                                            </div>
+                                            <div class="col-md-6">
+                                                Fax:
+                                                <input type="text" form="form-control"
+                                                    style="width:40%; margin-left: 160px; ">
+                                            </div>
+                                        </div>
+                                        <div class="row bg-light fw-bold mt-4" style="margin-left: 10px;">
+                                            Address Information
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div class="col-md-6">Bill to Name:
+                                                <input type="text" form="form-control"
+                                                    style="width:40%; margin-left: 70px;">
+                                            </div>
+                                            <div class="col-md-6">
+                                                Ship to Name:
+                                                <input type="text" form="form-control"
+                                                    style="width:40%; margin-left: 90px; ">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                 </div>
                             </div>
-                        </span>
-                    </div>
+                        </div>
+                    </span>
                 </div>
                 <table class="table table-striped table-hover table-bordered Quotes mt-2">
                     <thead>

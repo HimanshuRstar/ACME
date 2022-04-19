@@ -25,7 +25,7 @@
         </div>
 
         <form name="myForm" class="rounded bg-white shadow p-5 main-form needs-validation" id="form"
-          onsubmit="return validateForm()" action="/Dashboard.html" novalidate>
+          onsubmit="validateForm()" action="/Dashboard.html" novalidate>
 
           <h3 class="text-dark fw-bolder fs-4 mb-2">Sign in to ACME</h3>
           <div class="fw-normal text-muted mb-4">
@@ -35,7 +35,7 @@
 
             <label for="validationCustom01" class="form-label">Email</label>
             <div class="input-group has-validation eMail">
-              <input type="text" class="form-control email_validate" id="validationCustom01" required>
+              <input type="email" class="form-control email_validate" id="validationCustom01" required>
               <div class="valid-feedback">
                 Looks good!
               </div>
