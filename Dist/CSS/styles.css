@@ -151,6 +151,17 @@ ul li a {
         margin-left: 10px;
     }
 
+    .filter_btn {
+        margin-right: 150px;
+    }
+
+    .filter_btn1 {
+        margin-right: 140px;
+    }
+
+    .add_newquote {
+        display: none;
+    }
 
 }
 
@@ -357,4 +368,22 @@ td {
 
 .rotate180 {
     transform: rotate(-60deg);
+}
+
+.quotes_details {
+    display: none;
+    margin-left: 50px;
+}
+
+.Quotes tr:hover .quotes_details {
+    display: block;
+}
+
+#match-list {
+    position: absolute;
+}
+
+.matchedItems:hover {
+    background: #F0F0F0;
+    cursor: pointer;
 }
