@@ -1,33 +1,130 @@
-// function validateForm() {
-//     let email = document.getElementsByClassName("email_validate").value;
-//     let pass = document.getElementsByClassName("class_validate").value;
-//     let email1 = "himanshukathuria1997@gmail.com"
-//     let pass1 = "Himanshu123"
+let registeredUsers = [
+    {
+        "email": "sonu@gmail.com",
+        "password": "sonu^%$ert"
+    },
+    {
+        "email": "himanshu@gmail.com",
+        "password": "himanshu^%$ert"
+    },
+    {
+        "email": "aashna@gmail.com",
+        "password": "aashna^%$ert"
+    },
+    {
+        "email": "vishnu@gmail.com",
+        "password": "vishnu^%$ert"
+    },
 
-//     if (email == null || email != email1) {
-//         alert("Email is not correct");
-//         return false;
-//     }
-//     else if (pass.length < 6 || pass != pass1) {
+    {
+        "email": "umesh@gmail.com",
+        "password": "umesh^%$ert"
+    }
+]
 
-//         alert("Password is not correct");
-//         return false;
+
+let emailVal = document.getElementById("email_validate").value;
+let pwdVal = document.getElementById("pass_validate").value;
+let error = document.getElementById("validationError");
+
+
+function checkValidation() {
+    let object = registeredUsers.find(obj => obj.email == emailVal && obj.password == pwdVal);
+    if (object != null)
+        console.log('Login successfull!');
+    else {
+        let findObject = registeredUsers.find(obj => obj.email == emailVal);
+        if (findObject != null)
+            pwdValidate();
+        else
+            emailValidate();
+    }
+}
+
+function emailValidate() {
+    let object = registeredUsers.find(obj => obj.email == emailVal);
+    if (object) {
+        error.innerHTML = "Email Address is Valid."
+    } else if (emailVal == null) {
+        error.innerHTML = "Please fill the email."
+    }
+}
+
+function pwdValidate() {
+    let object = registeredUsers.find(obj => obj.email == emailVal);
+    if (object) {
+        error.innerHTML = "Email Address is Valid."
+    } else if (emailVal == null) {
+        error.innerHTML = "Please fill the email."
+    }
+}
+
+
+
+
+
+
+
+// let checkValidation = (txtEmailVal, txtPwdVal) => {
+//     txtEmailVal = document.getElementById("email_validate");
+//     txtPwdVal = document.getElementById("pass_validate")
+//     let object = registeredUsers.find(obj => obj.email == txtEmailVal && obj.password == txtPwdVal);
+
+//     if (object != null)
+//         console.log('Login successfull!!');
+//     else {
+//         let findObject = registeredUsers.find(obj => obj.email == txtEmailVal);
+//         if (findObject != null)
+//             console.log('Incorrect Password!!');
+//         else
+//             console.log('User does not exist!!');
 //     }
 // }
 
-// function validateForm() {
-//     let email = document.getElementById("email").value;
-//     let pass = document.getElementById("password").value;
-//     let email1 = "himanshukathuria1997@gmail.com"
-//     let pass1 = "Himanshu123"
 
-//     if (email === email1 && !email) {
-//         alert("Email is not correct");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let emailValidate = [{
+//     email: "himanshukathuria1997@gmail.com",
+//     password: "Himanshu123"
+// },
+// {
+//     email: "himanshu.kathuria@rstartec.com",
+//     password: "Himanshu1234"
+// }]
+
+// // emailValidate.forEach((e) => {
+// //     console.log(e.email);
+// // })
+// function validateForm() {
+//     let email = document.getElementById("email_validate").value;
+//     let pass = document.getElementById("pass_validate").value;
+//     let email1 = emailValidate[0].email;
+//     let pass1 = emailValidate[0].password;
+//     let error = document.getElementById("validationError")
+
+
+//     if (email == null || email != email1) {
+//         error.innerHTML = "Email Address is Not Valid."
 //         return false;
 //     }
-//     else if (pass === pass1 && !pass) {
-
-//         alert("Password is not correct");
+//     else if (pass.length < 6 || pass != emailValidate[i].password) {
+//         error.innerHTML = "Password is Not Valid."
 //         return false;
 //     }
 // }
