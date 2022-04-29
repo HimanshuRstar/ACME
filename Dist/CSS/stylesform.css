@@ -5,6 +5,10 @@
 }
 
 body {
+    background-image: url(/Dist/Images/bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     width: 100%;
     /* background: #E5E7EB; */
     font-family: 'Montserrat', sans-serif;

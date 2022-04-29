@@ -1,38 +1,120 @@
-const search = document.getElementById("search");
-const matchList = document.getElementById("match-list");
+let products =
+    [
+        {
+            "id": 1,
+            "name": "Iphone",
+            "description": "4gb RAM, 128gb ROM. Retina Display",
+            "unitprice": "700$"
+        },
+        {
+            "id": 2,
+            "name": "MI",
+            "description": "5gb RAM, 128gb ROM. Retina Display",
+            "unitprice": "300$"
+        },
+        {
+            "id": 3,
+            "name": "Realme",
+            "description": "4gb RAM, 128gb ROM. Retina Display",
+            "unitprice": "400$"
+        },
+        {
+            "id": 4,
+            "name": "Samsung",
+            "description": "4gb RAM, 128gb ROM. Retina Display",
+            "unitprice": "600$"
+        },
+        {
+            "id": 5,
+            "name": "LG",
+            "description": "4gb RAM, 128gb ROM. Retina Display",
+            "unitprice": "500$"
+        },
+        {
+            "id": 6,
+            "name": "Huawei",
+            "description": "4gb RAM, 128gb ROM. Retina Display",
+            "unitprice": "600$"
+        },
+        {
+            "id": 7,
+            "name": "Oppo",
+            "description": "4gb RAM, 128gb ROM. Retina Display",
+            "unitprice": "200$"
+        },
+        {
+            "id": 8,
+            "name": "Motorola",
+            "description": "4gb RAM, 128gb ROM. Retina Display",
+            "unitprice": "200$"
+        },
+        {
+            "id": 9,
+            "name": "Microsoft",
+            "description": "4gb RAM, 128gb ROM. Retina Display",
+            "unitprice": "200$"
+        },
+        {
+            "id": 10,
+            "name": "Micromax",
+            "description": "4gb RAM, 128gb ROM. Retina Display",
+            "unitprice": "200$"
+        },
+        {
+            "id": 11,
+            "name": "Maxon",
+            "description": "4gb RAM, 128gb ROM. Retina Display",
+            "unitprice": "200$"
+        },
+        {
+            "id": 12,
+            "name": "Oneplus",
+            "description": "4gb RAM, 128gb ROM. Retina Display",
+            "unitprice": "200$"
+        },
+        {
+            "id": 13,
+            "name": "Orange",
+            "description": "4gb RAM, 128gb ROM. Retina Display",
+            "unitprice": "200$"
+        },
+        {
+            "id": 14,
+            "name": "O2",
+            "description": "4gb RAM, 128gb ROM. Retina Display",
+            "unitprice": "200$"
+        },
+        {
+            "id": 15,
+            "name": "Panasonic",
+            "description": "4gb RAM, 128gb ROM. Retina Display",
+            "unitprice": "200$"
+        }
+    ]
 
-const searchProducts = async searchText => {
-    const res = await fetch('../products.json');
-    const products = await res.json();
+// let option = "";
 
-    // console.log(products);
+// for (let i = 0; i < products.length; i++) {
+//     option += '<option value="' + products[i].id + '">' + products[i].name + "</option"
+//     console.log(products[i].id);
+// }
+// document.getElementById("slctProducts").innerHTML = option;
 
-    let matches = products.filter(product => {
-        const regex = new RegExp(`^${searchText}`, 'gi');
-        return product.name.match(regex);
-    });
-    if (searchText.length === 0) {
-        matches = [];
-        matchList.innerHTML = '';
-    }
-    outputHtml(matches);
+
+products.forEach((product) => {
+    let option = document.createElement("option");
+
+    option.text = product.name;
+    option.value = product.description;
+
+    document.getElementById("slctProducts").appendChild(option);
+});
+
+slctProducts.onchange = function () {
+    document.getElementById("description").placeholder = slctProducts.value;
 };
 
-const outputHtml = matches => {
-    if (matches.length > 0) {
-        const html = matches.map(match => `
-       <div class = "form-control matchedItems">
-       <p>${match.name}</p>
-       </div>   
-     `).join('');
-        matchList.innerHTML = html;
-    }
-}
-search.addEventListener('input', () => searchProducts(search.value));
-
-
-
-// Constructor 
+//Constructor
 function Product(name, description, quantity) {
     this.name = name;
     this.description = description;
@@ -43,8 +125,9 @@ function Display() {
 
 }
 
+
 Display.prototype.add = function (product) {
-    console.log("add")
+    // console.log("add")
     tableBody = document.getElementById('tableBody');
     let tableString = `<tr>
                                 <td scope="row">${product.name}</th>
@@ -52,7 +135,8 @@ Display.prototype.add = function (product) {
                                 <td>${product.quantity}</td>
                                 <td>${product.quantity * 100}</td>
                         </tr>`;
-
+    // console.log("product Name", product.name);
+    // console.log("descriptionnnn", product.description);
     tableBody.innerHTML += tableString;
 }
 
@@ -62,20 +146,18 @@ Display.prototype.clear = function () {
     productForm.reset()
 }
 
-
-
 let productForm = document.getElementById("productForm");
 productForm.addEventListener('submit', productFormSubmit);
 
-function productFormSubmit(p) {
-    console.log("Submitted");
 
-    let name = document.getElementById('productName').value;
-    let description = document.getElementById('description').value;
+function productFormSubmit(p) {
+    // console.log("Submitted");
+    let name = document.getElementById('slctProducts').options[slctProducts.selectedIndex].text;
+    let description = document.getElementById('slctProducts').value;
     let quantity = document.getElementById('quantity').value;
 
     let product = new Product(name, description, quantity);
-    console.log(product);
+    // console.log(product);
 
     let display = new Display();
     display.add(product);
@@ -85,3 +167,24 @@ function productFormSubmit(p) {
 
 }
 
+// (function () {
+//     'use strict';
+//     window.addEventListener('load', function () {
+//         // Fetch all the forms we want to apply custom Bootstrap validation styles to
+//         var forms = document.getElementsByClassName('needs-validation');
+//         // Loop over them and prevent submission
+//         // @ts-ignore
+//         var validation = Array.prototype.filter.call(forms, function (form) {
+//             form.addEventListener('submit', function (event) {
+//                 if (form.checkValidity() === false) {
+//                     event.preventDefault();
+//                     event.stopPropagation();
+//                 } else {
+//                     creat()
+//                 }
+
+//                 form.classList.add('was-validated');
+//             }, false);
+//         });
+//     }, false);
+// })();

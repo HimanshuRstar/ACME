@@ -5,7 +5,7 @@ let users = [
     },
     {
         "email": "himanshu@gmail.com",
-        "password": "himanshu^%$ert"
+        "password": "himanshu"
     },
     {
         "email": "aashna@gmail.com",
@@ -22,8 +22,17 @@ let users = [
     }
 ]
 
+document.getElementById('registerBtn').onclick = function (e) {
+    var newUsername = document.getElementById('registerEmail').value;
+    var newPassword = document.getElementById('registerPass').value;
+    users.push({ email: newUsername, pass: newPassword });
+    console.log(users);
 
-document.getElementById('loginBtn').onclick = function () {
+    e.preventDefault();
+}
+
+
+function checkValidation() {
     var emailVal = document.getElementById('email_validate').value
     var pwdVal = document.getElementById('pass_validate').value
     let error = document.getElementById("validationError");
@@ -41,7 +50,6 @@ document.getElementById('loginBtn').onclick = function () {
     }
     error.innerHTML = 'Please fill the Correct Email'
     return false;
-
 }
 
 
@@ -75,25 +83,18 @@ document.getElementById('loginBtn').onclick = function () {
 //         }
 //     ]
 
-//     let object = registeredUsers.find(obj => obj.email == txtEmailVal && obj.password == txtPwdVal);
-//     console.log('testobject', object);
-//     if (object == null) {
-//         alert('Pls validate your form')
-//         // error.innerHTML = "Email Address is Not Valid."
-//         return false;
-//     }
-//     else if (txtPwdVal.length < 6) {
-//         alert('testing password')
-//         return false;
-//     }
+// let object = registeredUsers.find(obj => obj.email == txtEmailVal && obj.password == txtPwdVal);
+// console.log('testobject', object);
+// if (object == null) {
+//     alert('Pls validate your form')
+//     // error.innerHTML = "Email Address is Not Valid."
+//     return false;
 // }
-
-
-
-
-
-
-
+// else if (txtPwdVal.length < 6) {
+//     alert('testing password')
+//     return false;
+// }
+// }
 
 
 
