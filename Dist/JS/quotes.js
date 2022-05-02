@@ -62,6 +62,7 @@ function quotesFormSubmit() {
     }
 
     quotesArr.push(quote);
+
     localStorage.setItem("Quotes", JSON.stringify(quotesArr));
     console.log(quotesArr);
 
