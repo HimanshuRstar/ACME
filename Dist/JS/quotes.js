@@ -46,9 +46,10 @@ function quotesFormSubmit() {
     // console.log('you have submitted quotes form');
     let name = document.getElementById("quoteName").value;
     let createdDate = document.getElementById("createdDate").value;
-    let status = document.getElementById("status").value;
+    let status = document.getElementById("status");
+    let displayStatus = status.options[status.selectedIndex].text;
     let createdBy = document.getElementById("createdBy").value;
-    let quote = new Quote(name, createdDate, status, createdBy);
+    let quote = new Quote(name, createdDate, displayStatus, createdBy);
     console.log(quote);
     let display = new Display();
 

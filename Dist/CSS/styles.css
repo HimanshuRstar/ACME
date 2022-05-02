@@ -94,6 +94,18 @@ ul li a {
         overflow-y: hidden;
     } */
 
+    #pagination {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-right: 100px;
+    }
+
+    .showPage {
+        font-size: 12px;
+        margin-left: 150px;
+    }
+
     .pics {
         display: none;
     }
