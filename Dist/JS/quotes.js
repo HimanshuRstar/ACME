@@ -6,11 +6,6 @@ document.querySelector('.select-field').addEventListener('click', () => {
 
 // let quotesArr = [];
 
-// function addQuotes() {
-//     let quote = Quote.prototype.add.call(this);
-//     quotesArr.push(quote);
-// }
-
 function Quote(name, createdDate, status, createdBy) {
     this.name = name;
     this.createdDate = createdDate;
@@ -22,7 +17,8 @@ function Display() {
 
 };
 
-Display.prototype.add = function (quote) {
+
+Display.prototype.addTable = function (quote) {
     tableBodyQuotes = document.getElementById("tableBodyQuotes");
     let tableString = `<tr>
                             <td scope="row">${quote.name}</th>
@@ -50,14 +46,27 @@ function quotesFormSubmit() {
     let displayStatus = status.options[status.selectedIndex].text;
     let createdBy = document.getElementById("createdBy").value;
     let quote = new Quote(name, createdDate, displayStatus, createdBy);
-    console.log(quote);
+
     let display = new Display();
 
-
-    display.add(quote);
+    display.addTable(quote);
     display.clear();
 
+    //Saving to local storage
+    let quotes = localStorage.getItem("Quotes");
+
+    if (quotes == null) {
+        quotesArr = [];
+    } else {
+        quotesArr = JSON.parse(quotes);
+    }
+
+    quotesArr.push(quote);
+    localStorage.setItem("Quotes", JSON.stringify(quotesArr));
+    console.log(quotesArr);
+
     return false;
+
 }
 
 (function () {
@@ -82,3 +91,35 @@ function quotesFormSubmit() {
         });
     }, false);
 })();
+
+
+//local storage saving
+
+// let addBtn = document.getElementById('save');
+// addBtn.addEventListener("click", function (e) {
+
+//     let name = document.getElementById("quoteName").value;
+//     let createdDate = document.getElementById("createdDate").value;
+//     let status = document.getElementById("status");
+//     let displayStatus = status.options[status.selectedIndex].text;
+//     let createdBy = document.getElementById("createdBy").value;
+
+//     let quote = new Quote(name, createdDate, displayStatus, createdBy);
+
+
+
+// let quotes = localStorage.getItem("Quotes");
+
+// if (quotes == null) {
+//     quotesArr = [];
+// } else {
+//     quotesArr = JSON.parse(quotes);
+// }
+
+// quotesArr.push(quote);
+
+// localStorage.setItem("Quotes", JSON.stringify(quotesArr));
+
+// console.log(quotesArr);
+
+// });
