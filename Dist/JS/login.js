@@ -46,12 +46,10 @@ function checkValidation() {
                 return false;
             }
         }
-
     }
     error.innerHTML = 'Please fill the Correct Email'
     return false;
 }
-
 
 
 // function validateForm() {
