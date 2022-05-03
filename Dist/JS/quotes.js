@@ -36,7 +36,7 @@ function showData() {
     var x = table.rows.length;
     while (--x) {
         table.deleteRow(x);
-    }
+    };
 
     for (i = 0; i < quotesArr.length; i++) {
         let r = table.insertRow();

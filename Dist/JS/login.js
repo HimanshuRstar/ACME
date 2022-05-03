@@ -31,7 +31,6 @@ document.getElementById('registerBtn').onclick = function (e) {
     e.preventDefault();
 }
 
-
 function checkValidation() {
     var emailVal = document.getElementById('email_validate').value
     var pwdVal = document.getElementById('pass_validate').value
