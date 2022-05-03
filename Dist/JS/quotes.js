@@ -4,136 +4,134 @@ document.querySelector('.select-field').addEventListener('click', () => {
 
 });
 
-let quotesArr = [];
-function addData() {
-    getData();
-    quotesArr.push({
-        quoteNumber: document.getElementById("quoteNumber").value,
-        name: document.getElementById("quoteName").value,
-        createdDate: document.getElementById("createdDate").value,
-        // status: document.getElementById("status"),
-        // displayStatus: status.options[status.selectedIndex].text,
-        createdBy: document.getElementById("createdBy").value
-    });
-
-    localStorage.setItem("localQuotes", JSON.stringify(quotesArr));
-    showData();
-}
-function getData() {
-    var str = localStorage.getItem("localQuotes");
-    if (str != null)
-        quotesArr = JSON.parse(str);
-}
-
-function deleteData() { }
-
-function showData() {
-    getData();
-
-
-    let table = document.getElementById("tableQuotes");
-
-    var x = table.rows.length;
-    while (--x) {
-        table.deleteRow(x);
-    };
-
-    for (i = 0; i < quotesArr.length; i++) {
-        let r = table.insertRow();
-        let cell1 = r.insertCell();
-        let cell2 = r.insertCell();
-        let cell3 = r.insertCell();
-        let cell4 = r.insertCell();
-        var cell5 = r.insertCell();
-
-        cell1.innerHTML = quotesArr[i].quoteNumber;
-        cell2.innerHTML = quotesArr[i].name;
-        cell3.innerHTML = quotesArr[i].createdDate;
-        cell4.innerHTML = quotesArr[i].createdBy;
-        cell5.innerHTML = `<button type="button" class="btn btn-primary quotes_details"
-                                    onclick="location.href='Quotes2.html'">View
-                                    Details</button>`;
-
-
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
 // let quotesArr = [];
+// function addData() {
+//     getData();
+//     quotesArr.push({
+//         quoteNumber: document.getElementById("quoteNumber").value,
+//         name: document.getElementById("quoteName").value,
+//         createdDate: document.getElementById("createdDate").value,
+//         // status: document.getElementById("status"),
+//         // displayStatus: status.options[status.selectedIndex].text,
+//         createdBy: document.getElementById("createdBy").value
+//     });
 
-// function Quote(name, createdDate, status, createdBy) {
-//     this.name = name;
-//     this.createdDate = createdDate;
-//     this.status = status;
-//     this.createdBy = createdBy;
+//     localStorage.setItem("localQuotes", JSON.stringify(quotesArr));
+//     showData();
+// }
+// function getData() {
+//     var str = localStorage.getItem("localQuotes");
+//     if (str != null)
+//         quotesArr = JSON.parse(str);
 // }
 
-// function Display() {
+// function deleteData() { }
 
-// };
+// function showData() {
+//     getData();
 
 
-// Display.prototype.addTable = function (quote) {
-//     tableBodyQuotes = document.getElementById("tableBodyQuotes");
-//     let tableString = `<tr>
-//                             <td scope="row">${quote.name}</th>
-//                             <td>${quote.createdDate}</td>
-//                             <td>${quote.status}</td>
-//                             <td>${quote.createdBy}</td>
-//                             <td><button type="button" class="btn btn-primary quotes_details"
+//     let table = document.getElementById("tableQuotes");
+
+//     var x = table.rows.length;
+//     while (--x) {
+//         table.deleteRow(x);
+//     };
+
+//     for (i = 0; i < quotesArr.length; i++) {
+//         let r = table.insertRow();
+//         let cell1 = r.insertCell();
+//         let cell2 = r.insertCell();
+//         let cell3 = r.insertCell();
+//         let cell4 = r.insertCell();
+//         var cell5 = r.insertCell();
+
+//         cell1.innerHTML = quotesArr[i].quoteNumber;
+//         cell2.innerHTML = quotesArr[i].name;
+//         cell3.innerHTML = quotesArr[i].createdDate;
+//         cell4.innerHTML = quotesArr[i].createdBy;
+//         cell5.innerHTML = `<button type="button" class="btn btn-primary quotes_details"
 //                                     onclick="location.href='Quotes2.html'">View
-//                                     Details</button></td>
-//                         </tr>`;
-//     tableBodyQuotes.innerHTML += tableString;
-// }
-
-// Display.prototype.clear = function () {
-//     let quotesForm = document.getElementById("quotesForm");
-//     quotesForm.reset();
-// }
+//                                     Details</button>`;
 
 
-
-// function quotesFormSubmit() {
-//     // console.log('you have submitted quotes form');
-//     let name = document.getElementById("quoteName").value;
-//     let createdDate = document.getElementById("createdDate").value;
-//     let status = document.getElementById("status");
-//     let displayStatus = status.options[status.selectedIndex].text;
-//     let createdBy = document.getElementById("createdBy").value;
-//     let quote = new Quote(name, createdDate, displayStatus, createdBy);
-
-//     let display = new Display();
-
-//     display.addTable(quote);
-//     display.clear();
-
-
-//     //Saving to local storage
-//     let quotes = localStorage.getItem("Quotes");
-
-//     if (quotes == null) {
-//         quotesArr = [];
-//     } else {
-//         quotesArr = JSON.parse(quotes);
 //     }
 
-//     quotesArr.push(quote);
-
-//     localStorage.setItem("Quotes", JSON.stringify(quotesArr));
-//     console.log(quotesArr);
-
-//     return false;
 // }
+
+
+
+let quotesArr = [];
+
+function Quote(name, createdDate, status, createdBy) {
+    this.name = name;
+    this.createdDate = createdDate;
+    this.status = status;
+    this.createdBy = createdBy;
+}
+
+function Display() {
+
+};
+
+
+Display.prototype.addTable = function (quote) {
+    tableBodyQuotes = document.getElementById("tableBodyQuotes");
+    tableBodyQuotes.innerHTML = "";
+
+    for (let i = 0; i < quotesArr.length; i++) {
+        let tableString = `<tr>
+                            <td scope="row">${quotesArr[i].name}</th>
+                            <td>${quotesArr[i].createdDate}</td>
+                            <td>${quotesArr[i].status}</td>
+                            <td>${quotesArr[i].createdBy}</td>
+                            <td><button type="button" class="btn btn-primary quotes_details"
+                                    onclick="location.href='Quotes2.html'">View
+                                    Details</button></td>
+                        </tr>`;
+        tableBodyQuotes.innerHTML += tableString;
+    }
+}
+
+Display.prototype.clear = function () {
+    let quotesForm = document.getElementById("quotesForm");
+    quotesForm.reset();
+}
+
+
+
+function quotesFormSubmit() {
+    // console.log('you have submitted quotes form');
+    let name = document.getElementById("quoteName").value;
+    let createdDate = document.getElementById("createdDate").value;
+    let status = document.getElementById("status");
+    let displayStatus = status.options[status.selectedIndex].text;
+    let createdBy = document.getElementById("createdBy").value;
+    let quote = new Quote(name, createdDate, displayStatus, createdBy);
+
+
+
+
+    //Saving to local storage
+    let quotes = localStorage.getItem("Quotes");
+
+    if (quotes == null) {
+        quotesArr = [];
+    } else {
+        quotesArr = JSON.parse(quotes);
+    }
+
+    quotesArr.push(quote);
+
+    localStorage.setItem("Quotes", JSON.stringify(quotesArr));
+    console.log(quotesArr);
+
+    let display = new Display();
+    display.addTable(quote);
+    display.clear();
+
+    return false;
+}
 
 
 (function () {
@@ -149,8 +147,8 @@ function showData() {
                     event.preventDefault();
                     event.stopPropagation();
                 } else {
-                    showData()
-                    // quotesFormSubmit()
+                    // showData()
+                    quotesFormSubmit()
                     $('#exampleModal').modal('hide')
                 }
 
