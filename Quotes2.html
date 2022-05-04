@@ -108,7 +108,7 @@
                                 onclick="location.href='quotesAdd.html'">Convert to Order</button>
                         </div>
                     </div>
-                    <div class="container-fluid quotes_list">
+                    <div class="container-fluid quotes_list" id="showDetails">
                         <div class="row">
                             <div class="col-md-3">
                                 <span>Name:</span><br>
@@ -150,8 +150,9 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body my-3">
-                                    <!-- <div class="row my-3">
+                                <form id="productForm" class="needs-validation" onsubmit=" return false;">
+                                    <div class="modal-body my-3">
+                                        <!-- <div class="row my-3">
                                         <div class="col-md-6">
                                             <input class="form-control me-2" type="search" placeholder="Search"
                                                 aria-label="Search">
@@ -160,13 +161,16 @@
                                             <button class="btn btn-outline-success" type="submit">Search</button>
                                         </div>
                                     </div> -->
-                                    <form id="productForm">
+
                                         <div class="row mb-3">
-                                            <label for="name" class="col-sm-2 col-form-label">Product Name:
+                                            <label for="name" class="col-sm-2 col-form-label">Product Name:<span
+                                                    style="color: red;">*</span>
                                             </label>
+
                                             <div class="col-sm-10">
 
-                                                <select id="slctProducts" class="form-control">
+                                                <select id="slctProducts" class="form-control" required>
+
                                                     <option value="">Choose Product</option>
                                                 </select>
                                                 <div id="match-list"></div>
@@ -190,45 +194,45 @@
                                             <label for="quantity" class="col-sm-2 col-form-label">Quantity:
                                             </label>
                                             <div class="col-sm-10">
-                                                <input type="number" class="form-control" id="quantity">
+                                                <input type="number" class="form-control" id="quantity" required>
                                             </div>
                                         </div>
 
                                         <div class="modal-footer">
-                                            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Add
+                                            <button type="submit" class="btn btn-primary">Add
                                                 Product
                                             </button>
                                         </div>
-                                    </form>
-                                </div>
-
+                                </form>
                             </div>
+
                         </div>
                     </div>
-                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0"
-                        class="scrollspy-example" tabindex="0">
-                        <table class="table table-striped table-bordered table_quotes" width="100%" id="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Product Name</th>
-                                    <th scope="col">DESCRIPTION</th>
-                                    <th scope="col">QUANTITY</th>
-                                    <th scope="col">TOTAL</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tableBody">
-                                <!-- <tr>
+                </div>
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example"
+                    tabindex="0">
+                    <table class="table table-striped table-bordered table_quotes" width="100%" id="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">DESCRIPTION</th>
+                                <th scope="col">QUANTITY</th>
+                                <th scope="col">TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- <tr>
                                     <td scope="row">KAEC100100-R_AT1</th>
                                     <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
                                     <td>20</td>
                                     <td>$500.00</td>
                                 </tr> -->
-                            </tbody>
-                        </table>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 

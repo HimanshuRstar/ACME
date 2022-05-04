@@ -92,6 +92,24 @@ let products =
         }
     ]
 
+
+let myKeysValues = window.location.search;
+// console.log("Keys & Values:", myKeysValues);
+
+let urlParam = new URLSearchParams(myKeysValues);
+let param = urlParam.get('quoteId');
+console.log(param);
+
+// let testArr = [];
+
+window.onload = function () {
+
+    let localQuotes = localStorage.getItem("Quotes");
+    console.log(localQuotes);
+}
+
+
+
 // let option = "";
 
 // for (let i = 0; i < products.length; i++) {
@@ -150,7 +168,7 @@ let productForm = document.getElementById("productForm");
 productForm.addEventListener('submit', productFormSubmit);
 
 
-function productFormSubmit(p) {
+function productFormSubmit() {
     // console.log("Submitted");
     let name = document.getElementById('slctProducts').options[slctProducts.selectedIndex].text;
     let description = document.getElementById('slctProducts').value;
@@ -162,29 +180,28 @@ function productFormSubmit(p) {
     let display = new Display();
     display.add(product);
     display.clear();
-
-    p.preventDefault();
-
+    return false;
 }
 
-// (function () {
-//     'use strict';
-//     window.addEventListener('load', function () {
-//         // Fetch all the forms we want to apply custom Bootstrap validation styles to
-//         var forms = document.getElementsByClassName('needs-validation');
-//         // Loop over them and prevent submission
-//         // @ts-ignore
-//         var validation = Array.prototype.filter.call(forms, function (form) {
-//             form.addEventListener('submit', function (event) {
-//                 if (form.checkValidity() === false) {
-//                     event.preventDefault();
-//                     event.stopPropagation();
-//                 } else {
-//                     creat()
-//                 }
+(function () {
+    'use strict';
+    window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        // @ts-ignore
+        var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    productFormSubmit();
+                    $('#exampleModal').modal('hide')
+                }
 
-//                 form.classList.add('was-validated');
-//             }, false);
-//         });
-//     }, false);
-// })();
+                // form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();

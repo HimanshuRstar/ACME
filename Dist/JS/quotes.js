@@ -1,8 +1,8 @@
 document.querySelector('.select-field').addEventListener('click', () => {
     document.querySelector('.list_products').classList.toggle('show');
     document.querySelector('.down-arrow').classList.toggle('rotate180');
-
 });
+
 
 // let quotesArr = [];
 // function addData() {
@@ -60,14 +60,15 @@ document.querySelector('.select-field').addEventListener('click', () => {
 // }
 
 
-
 let quotesArr = [];
 
-function Quote(name, createdDate, status, createdBy) {
+function Quote(id, name, createdDate, status, createdBy) {
+    this.id = id;
     this.name = name;
     this.createdDate = createdDate;
     this.status = status;
     this.createdBy = createdBy;
+    return this;
 }
 
 function Display() {
@@ -75,18 +76,24 @@ function Display() {
 };
 
 
+let viewBtnClick = function (itemId) {
+    // let obj = quotesArr.find(o => o.id === itemId)
+    location.href = 'Quotes2.html?quoteId=' + itemId;
+}
+
 Display.prototype.addTable = function (quote) {
     tableBodyQuotes = document.getElementById("tableBodyQuotes");
     tableBodyQuotes.innerHTML = "";
 
     for (let i = 0; i < quotesArr.length; i++) {
+
         let tableString = `<tr>
                             <td scope="row">${quotesArr[i].name}</th>
                             <td>${quotesArr[i].createdDate}</td>
                             <td>${quotesArr[i].status}</td>
                             <td>${quotesArr[i].createdBy}</td>
-                            <td><button type="button" class="btn btn-primary quotes_details"
-                                    onclick="location.href='Quotes2.html'">View
+                            <td><button type="button" id = quotesViewBtn_${quotesArr[i].id} class="btn btn-primary quotes_details"
+                                    onclick="viewBtnClick(${quotesArr[i].id});" >View
                                     Details</button></td>
                         </tr>`;
         tableBodyQuotes.innerHTML += tableString;
@@ -98,8 +105,6 @@ Display.prototype.clear = function () {
     quotesForm.reset();
 }
 
-
-
 function quotesFormSubmit() {
     // console.log('you have submitted quotes form');
     let name = document.getElementById("quoteName").value;
@@ -107,9 +112,7 @@ function quotesFormSubmit() {
     let status = document.getElementById("status");
     let displayStatus = status.options[status.selectedIndex].text;
     let createdBy = document.getElementById("createdBy").value;
-    let quote = new Quote(name, createdDate, displayStatus, createdBy);
-
-
+    let quote = new Quote(quotesArr.length + 1, name, createdDate, displayStatus, createdBy);
 
 
     //Saving to local storage
@@ -132,7 +135,6 @@ function quotesFormSubmit() {
 
     return false;
 }
-
 
 (function () {
     'use strict';
