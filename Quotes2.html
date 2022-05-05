@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="Dist/CSS/styles.css" />
 </head>
 
-<body>
+<body onload="showQuoteCred();">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2">
@@ -111,26 +111,22 @@
                     <div class="container-fluid quotes_list" id="showDetails">
                         <div class="row">
                             <div class="col-md-3">
-                                <span>Name:</span><br>
-                                <span class="info fw-bolder" id="quoteCredName">Greene LLC</span>
+                                <span>Quote Name:</span><br>
+                                <span class="info fw-bolder" id="quoteCredName"></span>
                             </div>
                             <div class="col-md-3">
-                                <span>Account Name:</span><br>
-                                <span class="info fw-bolder">Greene</span>
+                                <span>Oracle Creation Date:</span><br>
+                                <span class="info fw-bolder" id="quoteCreated"></span>
                             </div>
                             <div class="col-md">
-                                <span>Stage:</span><br>
-                                <span class="info fw-bolder">Committed</span>
+                                <span>Status:</span><br>
+                                <span class="info fw-bolder" id="quoteStatus"></span>
                             </div>
                         </div>
                         <div class="row pt-3">
                             <div class="col-md-3">
-                                <span>Owner ID:</span><br>
-                                <span class="info fw-bolder">Kian Doyle</span>
-                            </div>
-                            <div class="col-md-3">
-                                <span>Oracle Creation Date:</span><br>
-                                <span class="info fw-bolder">10/12/2020</span>
+                                <span>Created By:</span><br>
+                                <span class="info fw-bolder" id="quotedCreatedDate"></span>
                             </div>
                         </div>
                     </div>

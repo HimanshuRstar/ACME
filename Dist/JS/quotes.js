@@ -4,61 +4,6 @@ document.querySelector('.select-field').addEventListener('click', () => {
 });
 
 
-// let quotesArr = [];
-// function addData() {
-//     getData();
-//     quotesArr.push({
-//         quoteNumber: document.getElementById("quoteNumber").value,
-//         name: document.getElementById("quoteName").value,
-//         createdDate: document.getElementById("createdDate").value,
-//         // status: document.getElementById("status"),
-//         // displayStatus: status.options[status.selectedIndex].text,
-//         createdBy: document.getElementById("createdBy").value
-//     });
-
-//     localStorage.setItem("localQuotes", JSON.stringify(quotesArr));
-//     showData();
-// }
-// function getData() {
-//     var str = localStorage.getItem("localQuotes");
-//     if (str != null)
-//         quotesArr = JSON.parse(str);
-// }
-
-// function deleteData() { }
-
-// function showData() {
-//     getData();
-
-
-//     let table = document.getElementById("tableQuotes");
-
-//     var x = table.rows.length;
-//     while (--x) {
-//         table.deleteRow(x);
-//     };
-
-//     for (i = 0; i < quotesArr.length; i++) {
-//         let r = table.insertRow();
-//         let cell1 = r.insertCell();
-//         let cell2 = r.insertCell();
-//         let cell3 = r.insertCell();
-//         let cell4 = r.insertCell();
-//         var cell5 = r.insertCell();
-
-//         cell1.innerHTML = quotesArr[i].quoteNumber;
-//         cell2.innerHTML = quotesArr[i].name;
-//         cell3.innerHTML = quotesArr[i].createdDate;
-//         cell4.innerHTML = quotesArr[i].createdBy;
-//         cell5.innerHTML = `<button type="button" class="btn btn-primary quotes_details"
-//                                     onclick="location.href='Quotes2.html'">View
-//                                     Details</button>`;
-
-
-//     }
-
-// }
-
 
 let quotesArr = [];
 

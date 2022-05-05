@@ -1,3 +1,155 @@
+// document.querySelector('.select-field').addEventListener('click', () => {
+//     document.querySelector('.list_products').classList.toggle('show');
+//     document.querySelector('.down-arrow').classList.toggle('rotate180');
+// });
+
+function onloadClear() {
+    localStorage.clear();
+}
+window.onload = onloadClear();
+
+
+let quotesArr = [];
+
+let myKeysValues = window.location.search;
+// console.log("Keys & Values:", myKeysValues);
+
+let urlParam = new URLSearchParams(myKeysValues);
+let param = urlParam.get('quoteId');
+console.log(param);
+
+
+function Quote(id, name, createdDate, status, createdBy) {
+    this.id = id;
+    this.name = name;
+    this.createdDate = createdDate;
+    this.status = status;
+    this.createdBy = createdBy;
+    return this;
+}
+
+
+function Display() {
+
+};
+
+
+let viewBtnClick = function (itemId) {
+    // let obj = quotesArr.find(o => o.id === itemId)
+    location.href = 'Quotes2.html?quoteId=' + itemId;
+}
+
+Display.prototype.addTable = function (quote) {
+    tableBodyQuotes = document.getElementById("tableBodyQuotes");
+    tableBodyQuotes.innerHTML = "";
+
+    for (let i = 0; i < quotesArr.length; i++) {
+
+        let tableString = `<tr>
+                            <td scope="row">${quotesArr[i].name}</th>
+                            <td>${quotesArr[i].createdDate}</td>
+                            <td>${quotesArr[i].status}</td>
+                            <td>${quotesArr[i].createdBy}</td>
+                            <td><button type="button" id = quotesViewBtn_${quotesArr[i].id} class="btn btn-primary quotes_details"
+                                    onclick="viewBtnClick(${quotesArr[i].id});" >View
+                                    Details</button></td>
+                        </tr>`;
+        tableBodyQuotes.innerHTML += tableString;
+    }
+}
+
+Display.prototype.clear = function () {
+    let quotesForm = document.getElementById("quotesForm");
+    quotesForm.reset();
+}
+
+function quotesFormSubmit() {
+    // console.log('you have submitted quotes form');
+    let name = document.getElementById("quoteName").value;
+    let createdDate = document.getElementById("createdDate").value;
+    let status = document.getElementById("status");
+    let displayStatus = status.options[status.selectedIndex].text;
+    let createdBy = document.getElementById("createdBy").value;
+    let quote = new Quote(quotesArr.length + 0, name, createdDate, displayStatus, createdBy);
+
+
+    //Saving to local storage
+    let quotes = localStorage.getItem("Quotes");
+
+    if (quotes == null) {
+        quotesArr = [];
+    } else {
+        quotesArr = JSON.parse(quotes);
+    }
+
+    quotesArr.push(quote);
+
+    localStorage.setItem("Quotes", JSON.stringify(quotesArr));
+    console.log(quotesArr);
+
+    let display = new Display();
+    display.addTable(quote);
+    display.clear();
+
+    return false;
+}
+
+
+(function () {
+    'use strict';
+    window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        // @ts-ignore
+        var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    // showData()
+                    quotesFormSubmit()
+                    $('#exampleModal').modal('hide')
+                }
+
+                // form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
+
+
+
+// window.onload = function () {
+
+//     let localQuotes = localStorage.getItem("Quotes");
+//     testArr.push(JSON.parse(localQuotes));
+
+//     console.log("test", testArr);
+
+//     // console.log("abcd", localQuotes);
+
+// }
+
+function showQuoteCred() {
+    let quoteCredName = document.getElementById("quoteCredName");
+    let quoteCreated = document.getElementById("quoteCreated");
+    let quoteStatus = document.getElementById("quoteStatus");
+    let quotedCreatedDate = document.getElementById("quotedCreatedDate");
+
+    let displayData = localStorage.getItem("Quotes", JSON.stringify(quotesArr));
+    // console.log("abcde", displayData);
+
+    let displayAllData = JSON.parse(displayData);
+
+    quoteCredName.textContent = displayAllData[param].name;
+    quoteCreated.textContent = displayAllData[param].createdDate;
+    quoteStatus.textContent = displayAllData[param].status;
+    quotedCreatedDate.textContent = displayAllData[param].createdBy;
+}
+
+
 let products =
     [
         {
@@ -91,32 +243,6 @@ let products =
             "unitprice": "200$"
         }
     ]
-
-
-let myKeysValues = window.location.search;
-// console.log("Keys & Values:", myKeysValues);
-
-let urlParam = new URLSearchParams(myKeysValues);
-let param = urlParam.get('quoteId');
-console.log(param);
-
-// let testArr = [];
-
-window.onload = function () {
-
-    let localQuotes = localStorage.getItem("Quotes");
-    console.log(localQuotes);
-}
-
-
-
-// let option = "";
-
-// for (let i = 0; i < products.length; i++) {
-//     option += '<option value="' + products[i].id + '">' + products[i].name + "</option"
-//     console.log(products[i].id);
-// }
-// document.getElementById("slctProducts").innerHTML = option;
 
 
 products.forEach((product) => {
