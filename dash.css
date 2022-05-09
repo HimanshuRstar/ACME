@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* CSS for Dashboard*/
+.das{
+    background-color: #131367;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.box{
+    background-color: aqua;
+     
+}
+
+.mbox{
+    background-color: blue;
+    
+    
+}
+
+.d-md-flex{
+    display: -webkit-box!important;
+    display: -ms-flexbox!important;
+    display: flex!important; flex-wrap: wrap; justify-content: space-between; align-items: center; 
+}
+
+.aside{
+    background-color: #3a91f7;
+    /* margin: 0;
+    padding: 0; */
+   
+}
+
+.header{
+    background-color: #f0f2f7;
+}
+
+
+
+.logo2{
+    background-color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+.head{
+    background-color: white;
+}
+
+.card4{
+    background-color: #2a6cbe;
+    height: 100%;
+    width: 100%;
+    
+    
+}
+
+.card1{
+    background-color: #67ac5b;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.card2{
+    background-color:#ef993d;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.card3{
+    background-color: #3a91f7;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.fpic{
+    height: 435px;
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+.pic1{
+    height: 200px;
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+.pic2{
+    height: 200px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.pic3{
+    height: 200px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.pic4{
+    height: 200px;
+    width: 100%;
+    border-radius: 5px;
+}
+.msection{
+    margin-top: 70px;
+    margin-right: 10px;
+
+}
+.addr{
+    font-size: 14px;
+}
+
+
+.profile{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+
+.ic{
+    height: 80px;
+    width: 80px;
+    float: right; 
+}
+
+.ic2{
+    font-size: 70px;
+}
+.ic3{
+    height: 100%;
+    width: 60px;
+}
+ .item{
+     list-style: none;
+     color: white;
+     font-size: larger;
+    
+     text-decoration: none;
+ }
+ .item a {
+     color: white;
+     text-decoration: none;
+     margin-left: 10px;
+     
+ }
+ .item li {
+     margin-top: 20px;
+     margin-left: 40px;
+     
+ }
+
+ .tp{
+     float: right;
+    display: flex;
+    align-items: center;
+    
+ }
+
+ .serv{
+     margin-left: 30px;
+ }
+
+
+.item :hover {
+    background-color: #131367;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+
+.outertext{
+    position: relative;
+}
+
+.outertext figcaption{
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    padding: 15px;
+}
+
+.outertext2{
+    position: relative;
+}
+
+.outertext2 figcaption{
+    font-size: 14px;
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    top: 0;
+    left: 40%;
+    width: 60%;
+    height: 100%;
+    padding-top: 90px;
+}
+.outertext3{
+    position: relative;
+}
+
+.outertext3 figcaption{
+    font-size: 14px;
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    padding-top: 90px;
+}
+
+#result {
+    border: 1px dotted #ccc;
+    padding: 3px;
+  }
+  #result ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  #result ul li {
+    padding: 5px 0;
+  }
+  #result ul li:hover {
+    background: #eee;
+  }
+
+@media (min-width: 1000px) {
+    .aside2{
+        background-color: #3a91f7; 
+    }
+
+    #dropdownMenuButton2{
+        margin-left: -62px;
+    }
+
+    #dropdownMenuButton3{
+        margin-left: -26px;
+    }
+}
+
+@media (max-width: 550px) {
+    .tablefs{
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .filterbtn{
+        width: 120%;
+        font-size: 10px;
+       
+    }
+    .filterbtn2{
+        width:100%;
+        font-size: 18px;
+        margin: 0px;
+        padding: 0px;
+        
+    }
+
+    .header{
+        background-color: #f0f2f7;
+        position: absolute;
+        z-index: -1;
+        
+    }
+
+    .header3{
+        background-color: #f0f2f7;
+        position: absolute;
+        z-index: -1;
+        
+    }
+   
+    .item{
+        height: 100vh;
+    }
+    .title{
+        font-size: 10px; 
+     }
+     
+     .subtitle{
+         color: #039afe;
+         font-size: 12px;
+     }
+    
+}
+

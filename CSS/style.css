@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*CSS for Login Page*/
+.box1{
+    /*background-color: aqua;*/
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    
+    background-position: center;  
+    background-size: 450px; 
+    background-repeat: no-repeat;
+}
+
+.box2 {
+    /*background-color: blue;*/
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+    background-position: center;  
+    background-size: 450px; 
+    background-repeat: no-repeat;
+}
+
+.loginpage{
+    background-color:#f0f2f7;
+    height: 90%;
+    width: 90%;
+    border-radius: 25px;
+    padding: 0 0 100px;  
+}
+
+.img{
+    
+    height: 350px;
+}
+
+.img-fluid{
+    height: 100px;
+    
+}
+
+
+/* CSS for Dashboard*/
+
+.box{
+    background-color: aqua;
+     
+}
+
+.mbox{
+    background-color: blue;
+    
+    
+}
+
+.aside{
+    background-color: #3a91f7;
+    
+    
+   
+}
+
+.header{
+    background-color: #f0f2f7;
+    
+    
+}
+
+.header2{
+    background-color: #f0f2f7;
+    height: 100;
+    
+}
+
+
+
+.logo2{
+    background-color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+.head{
+    background-color: white;
+}
+
+.card4{
+    background-color: #2a6cbe;
+    height: 100%;
+    width: 100%;
+    
+    
+}
+
+.card1{
+    background-color: #67ac5b;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.card2{
+    background-color:#ef993d;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.card3{
+    background-color: #3a91f7;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.fpic{
+    height: 435px;
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+.pic1{
+    height: 200px;
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+.pic2{
+    height: 200px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.pic3{
+    height: 200px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.pic4{
+    height: 200px;
+    width: 100%;
+    border-radius: 5px;
+}
+.msection{
+    margin-top: 70px;
+    margin-right: 10px;
+
+}
+.addr{
+    font-size: 14px;
+}
+
+
+.profile{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+
+.ic{
+    height: 80px;
+    width: 80px;
+    float: right;
+     
+}
+
+.ic2{
+    font-size: 70px;
+    position: relative;
+}
+
+
+ .item{
+     list-style: none;
+     color: white;
+     font-size: larger;
+    
+     text-decoration: none;
+ }
+ .item a {
+     color: white;
+     text-decoration: none;
+     margin-left: 10px;
+     
+ }
+ .item li {
+     margin-top: 20px;
+     margin-left: 40px;
+     
+ }
+
+ .tp{
+     float: right;
+    display: flex;
+    align-items: center;
+    
+ }
+
+ .serv{
+     margin-left: 10px;
+ }
+.das{
+    background-color: #131367;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.item :hover {
+    background-color: #1f78c6;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+
+.outertext{
+    position: relative;
+}
+
+.outertext figcaption{
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    padding: 15px;
+}
+
+.outertext2{
+    position: relative;
+}
+
+.outertext2 figcaption{
+    font-size: 14px;
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    top: 0;
+    left: 40%;
+    width: 60%;
+    height: 100%;
+    padding-top: 90px;
+}
+.outertext3{
+    position: relative;
+}
+
+.outertext3 figcaption{
+    font-size: 14px;
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    padding-top: 90px;
+}
+
+/* CSS for Account Page*/
+.accountpage{
+    background-color: #039afe;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+      
+}
+.pfl{
+    display: flex;
+    justify-content: center;
+
+}
+
+.profilepic{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+.welcm{
+    color: white;
+}
+.f2{
+    font-size: 11px;
+    color: #c7cdd2;
+}
+.f1{
+    font-size: 13px;
+}
+
+.bt2{
+    height: 30px;
+    width: 30px;
+}
+.bgcolor{
+    background-color: #039afe;
+    width: 86vw;
+    height: 100vh;
+}
+
+td a{
+    text-decoration: none;
+    color: #000;
+}
+
+.tablefs{
+   
+    white-space: nowrap;
+}
+.filterbtn2{
+    width: 80%;  
+}
+
+.header3{
+    background-color: #f0f2f7;
+    height: 100vh;
+}
+
+
+
+.detailpage{
+    background-color: #ebf4ff;
+    border:2px solid #c6dffd;
+    border-radius: 5px;
+    
+}
+
+.title{
+   font-size: 18px; 
+}
+
+.subtitle{
+    color: #82b9fa;
+    font-size: 20px;
+}
+
+#email_error , #pass_error{
+    color: red;
+    margin-top: 5px;
+    border: 1px solid #ef9a9a;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 5px;
+    font-size: 14px;
+    display: none;
+    
+}
+
+.viewbtn{
+    height: 25px;
+    width: 60px;
+    font-size: 16;
+    padding: 0;
+    display: none;
+    float: right;
+    
+}
+.tablefs tr:hover .viewbtn{
+    display: block;
+}
+.contactText{
+    color: #039afe;
+}
+
+
+
+
+
+
+@media (max-width: 550px) {
+    .tablefs{
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .filterbtn{
+        width: 120%;
+        font-size: 10px;
+       
+    }
+    .filterbtn2{
+        width:100%;
+        font-size: 18px;
+        margin: 0px;
+        padding: 0px;
+        
+        
+    }
+
+    .header{
+        background-color: #f0f2f7;
+        position: absolute;
+        z-index: -1;
+        
+    }
+
+    .header3{
+        background-color: #f0f2f7;
+        position: absolute;
+        z-index: -1;
+        
+    }
+   
+    .item{
+        height: 100vh;
+    }
+    .title{
+        font-size: 10px; 
+     }
+     
+     .subtitle{
+         color: #82b9fa;
+         font-size: 12px;
+     }
+
+     .viewbtn{
+        height: 16px;
+        font-size: 10px;
+        width: 40px;
+        padding: 0;
+        display: none;
+        float: right;
+        
+    }
+    
+}
+
+
+@media (min-width: 1000px) {
+    .aside2{
+        background-color: #3a91f7; 
+    }
+}

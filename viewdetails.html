@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Details</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <link rel="stylesheet" href="dash.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="container-fluid p-0">
+        <div class="row m-0">
+
+            <span class=" navbar-expand-lg navbar-light  col-md-2 col-lg-2 aside2">
+                <span class=" ">
+
+                    <button class="navbar-toggler ms-3 mt-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <span class="navbar-nav  mb-2 mb-lg-0 row aside ">
+
+                            <div class="w-100 my-5 logo2 ">ACME Corp</div>
+
+                            <div class="item">
+                                <div>
+                                    <li class="">
+                                        <ion-icon name="grid-outline"></ion-icon><a
+                                            href="dashboard.html"> Dashboard</a>
+                                    </li>
+                                </div>
+                                <div>
+                                    <li>
+                                        <ion-icon name="newspaper-outline"></ion-icon> <a href="#">Quotes</a>
+                                    </li>
+                                </div>
+                                <div>
+                                    <li>
+                                        <ion-icon name="cart-outline"></ion-icon> <a href="#">Orders</a>
+                                    </li>
+                                </div>
+                                <div class="das">
+                                    <li>
+                                        <ion-icon name="receipt-outline"></ion-icon> <a
+                                            href="invoices.html">Invoices</a>
+                                    </li>
+                                </div>
+                                <div>
+                                    <li>
+                                        <ion-icon name="briefcase-outline"></ion-icon> <a href="#">Cases</a>
+                                    </li>
+                                </div>
+                                <div>
+                                    <li class="">
+                                        <ion-icon name="person-outline"></ion-icon> <a href="#">Accounts</a>
+                                    </li>
+                                </div>
+                                <div>
+                                    <li>
+                                        <ion-icon name="people-outline"></ion-icon> <a href="#">Users</a>
+                                    </li>
+                                </div>
+                                <div>
+                                    <li class="mt-5">
+                                        <ion-icon name="log-out-outline"></ion-icon> <a
+                                            href="login2.html">Log Out</a>
+                                    </li>
+                                </div>
+                            </div>
+
+
+
+                        </span>
+
+                    </div>
+                </span>
+            </span>
+
+            <div class="col-md-10 col-lg-10 col-sm-10  header ">
+                <div class="row head m-0 mb-3 mt-2 ">
+
+                    <div class="col-md-4  d-none d-sm-block ">
+                        <div class="m-2">Hi! Welcome back <b> Devion</b></div>
+                    </div>
+
+                    <div class="col-md-4  d-none d-sm-block">
+                        <div class=" addr m-2">1908 Progress Way,Alburnett,lowa-52202,USA.</div>
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="tp">
+                            <img src="default-user.jpg" alt="" class="profile m-2">
+                            Kian Doyle
+                            <ion-icon name="notifications" class=" m-2 text-center"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="bg-dark p-3 welcm d-md-none mt-2 ">
+                        <span class="f1"> Hi! Welcome back <b> Devion </b> </span> <br>
+                        <span class="f2 text-muted">1908 Progress Way,Alburnett,lowa-52202,USA.</span>
+
+                    </div>
+
+                </div>
+
+                <div class="white-box" style="background-color: white; padding: 5px;">
+                    <div class="d-md-flex mb-3">
+                        <div class="col-md-10 pt-3">
+                            <b>Invoices</b>
+                            <br>
+                            <p>Accounts test for community</p>
+                        </div>
+                        <div class="col-md-2 mt-1 pt-3">
+                            <a href="" class="btn" style=" color: white; background-color: #1d487b ;" role="button">
+                                Print
+                            </a>
+
+                            <a href="" class="btn" style=" color: white; background-color: #1d487b ;" role="button">
+                                Save
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="container" style="padding: 0%; background-color: #ebf4ff; margin-bottom: 5%;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h6 class="mb-3">From:</h6>
+                                    <div class="div1">
+                                        <strong>ACME Corp</strong>
+                                    </div>
+                                    <div id="address">1908 Progress Way, Alburnett, lowa-52202,USA.</div>
+                                    <div>Email: admin@acme.com</div>
+                                    <div>Phone: +48 123 456 789</div>
+                                    <div>Fax: +44 134 234 5647</div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h6 class="mb-3">Reciever's Address:</h6>
+                                    <div class="div2">
+                                        <div>
+                                            <strong id="username">James Harden</strong>
+                                        </div>
+                                        <div>
+                                            <strong id="raddress">42, Awesome Enclave, New York City,10394</strong>
+                                        </div>
+                                        <div>Email: 
+                                            <strong id="_email">james1992@gmail.com</strong>
+                                        </div>
+                                        <div>Phone:
+                                            <strong id="phones">+48 123 400 527</strong>
+                                        </div>
+                                        <div>Fax: 
+                                            <strong id="faxs">161 999 8888</strong> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h6 class="mb-3">Details:</h6>
+                                    <div class="div3">
+                                        <div>Invoice Number:
+                                            <strong id="innum">102789</strong>
+                                        </div>
+                                        <div> Date:
+                                            <strong id="dates"> April 14, 2022</strong> 
+                                        </div>
+                                        <div> Status:
+                                          <strong id="statuss">Active</strong>
+                                        </div>
+                                        <div>VAT: 
+                                            <strong id="vatss">NYC 09090390</strong>
+                                        </div>
+                                        <div>SWIFT code:
+                                            <strong id="swiftcodes">99 8888 7777 6666 5555</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-md-flex mb-3">
+                        <div class="col-md-10 pt-3">
+
+                        </div>
+                        <div class="col-md-2 mt-1 pt-3">
+
+                            <button type="button" class="btn" style=" background-color: #1d487b; color: white;"
+                                data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                                Add Products
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- <div class="col-md-12 mb-3 pt-3 justify-content-flex-end" >
+
+                        <button type="button" class="btn"
+                            style=" background-color: #1d487b; color: white;" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop2">
+                            Add Products
+                        </button>
+                    </div> -->
+
+                    <div class="table-responsive">
+                        <table class="table no-wrap">
+                            <thead>
+                                <tr>
+                                    <th class="border-top-0">#</th>
+                                    <th class="border-top-0">Product Name</th>
+                                    <th class="border-top-0">Description</th>
+                                    <th class="border-top-0">Quantity</th>
+                                    <th class="border-top-0">Unit Cost</th>
+                                    <th class="border-top-0">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="detailedlist">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-5"></div>
+                        <div class="col-lg-4 col-sm-5">
+                            <table class="table table-clear">
+                                <tbody>
+                                    <tr>
+                                        <td class="left">
+                                            <strong>Total Cost</strong>
+                                        </td>
+                                        <td class="right" id="subtotal"></td>
+                                    </tr>
+                                    <!-- <tr>
+                                        <td class="left">
+                                            <strong>Discount (20%)</strong>
+                                        </td>
+                                        <td class="right" id="discount">$1,699,40</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left">
+                                            <strong>VAT (10%)</strong>
+                                        </td>
+                                        <td class="right" id="vat">$679,76</td>
+                                    </tr> -->
+                                    <!-- <tr>
+                                        <td class="left">
+                                            <strong>Total</strong>
+                                        </td>
+                                        <td class="right">
+                                            <strong id="total">$7.477,36</strong>
+                                        </td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                            <!-- <a class="btn btn-success " href="#">
+                                <i class="fa fa-usd"></i>Proceed to Payment</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal " tabindex="-1" id="staticBackdrop2">
+
+                <div class="modal-dialog modal-lg justify-content-center">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Add or Search New Products</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-10 mb-3">Product Name:
+                                        <select class="form-control" id="statusId" data-toggle="dropdown">
+
+                                            <option value="aa" selected="selected">KAEC1001CO_AT1</option>
+                                            <option value="aa" selected="selected">KAEC10016-P_EC-Brown</option>
+                                            <option value="aa" selected="selected">KAEC10016-P_BD</option>
+                                            <option value="aa" selected="selected">BAEC10016</option>
+                                            <option value="aa" selected="selected">BAEC10078-EBC</option>
+                                            <option value="aa" selected="selected">WEAAC10124-AD</option>
+                                            <option value="aa" selected="selected">QJUEA-175002</option>
+                                            <option value="aa" selected="selected">YAAWQCSA-12</option>
+                                            <option value="aa" selected="selected">QJUEA-12s02</option>
+                                            <option value="aa" selected="selected">DBFEA-172</option>
+                                            <option value="aa" selected="selected">--select option--</option>
+
+                                        </select>
+                                    </div>
+            
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-md-10 mb-3">Description:
+                                        <textarea class="form-control" rows="1" id="description"
+                                            aria-label="readonly input example" readonly></textarea>
+                                    </div>
+
+                                </div>
+
+                                <div class="row justify-content-center">
+
+                                    <div class="col-md-10 mb-3" style="margin-left: 0px;">Quantity:
+                                        <input class="form-control" type="text" placeholder="" id="quantity"
+                                            aria-label="default input example">
+                                        <span id="pass-error" style="display: none">Empty / Invalid Password</span>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-md-10  mb-3" style="margin-left: 0px;">Unit Cost:
+                                        <input class="form-control" type="text" value="" id="unitcost"
+                                            aria-label="readonly input example" readonly>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" id="_addproduct" data-bs-dismiss="modal">Add
+                                    Product
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="products.js"></script>
+    <script src="users.js"></script>
+    <script src="view.js"></script>
+    <script>
+        console.log(window.location.search)
+        console.log(typeof JSON.parse(window.localStorage.getItem('records')))
+        
+        let srnos = parseInt(window.location.search.split("=")[1])
+        console.log(typeof srnos)
+        
+        console.log(window.location.search.split("="))
+
+        console.log(JSON.parse(window.localStorage.getItem('records'))[srnos])
+
+        let records = JSON.parse(window.localStorage.getItem('records'))
+        console.log(records[srnos-1])
+
+        let item = records[srnos-1]
+        document.getElementById("username").innerHTML=item.account_name
+        document.getElementById("raddress").innerHTML=item.address
+        document.getElementById("phones").innerHTML=item.phone
+        document.getElementById("faxs").innerHTML=item.fax
+        document.getElementById("_email").innerHTML=item.email
+
+        document.getElementById("innum").innerHTML=item.invoice_number
+        document.getElementById("dates").innerHTML=item.date
+        document.getElementById("statuss").innerHTML=item.status
+        document.getElementById("vatss").innerHTML=item.vat      
+        document.getElementById("swiftcodes").innerHTML=item.swift_code
+        
+        
+       
+        
+    </script>
+    
+    
+    <!-- <script>
+
+        $('#staticBackdrop2').on('shown.bs.modal', function () {
+            document.getElementById("_demo").reset();
+
+            // document.getElementById("_qty").readOnly = true;
+            document.getElementById("_description").readOnly = true;
+            document.getElementById("_unitcost").readOnly = true;
+            document.getElementById("_subtotal").readOnly = true;
+            document.getElementById("_discount").readOnly = true;
+            document.getElementById("_vat").readOnly = true;
+            document.getElementById("_total").readOnly = true;
+        })
+
+    </script> -->
+</body>
+
+</html>
