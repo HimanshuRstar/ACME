@@ -3,8 +3,6 @@ document.querySelector('.select-field').addEventListener('click', () => {
     document.querySelector('.down-arrow').classList.toggle('rotate180');
 });
 
-
-
 let quotesArr = [];
 
 function Quote(id, name, createdDate, status, createdBy) {

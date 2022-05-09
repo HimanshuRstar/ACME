@@ -1,7 +1,3 @@
-// document.querySelector('.select-field').addEventListener('click', () => {
-//     document.querySelector('.list_products').classList.toggle('show');
-//     document.querySelector('.down-arrow').classList.toggle('rotate180');
-// });
 
 // function onloadClear() {
 //     localStorage.clear();

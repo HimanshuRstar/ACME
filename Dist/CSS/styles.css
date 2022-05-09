@@ -112,7 +112,7 @@ ul li a {
     }
 
     .logo {
-        width: 230px;
+        width: 210px;
     }
 }
 
@@ -122,44 +122,6 @@ ul li a {
     }
 }
 
-@media screen and (min-width: 390px) and (max-width: 820px) {
-    .navbar {
-        width: 800px;
-        background: #fff;
-    }
-
-    .side_bar .profile {
-        display: flex;
-        /* margin-left: 190px; */
-    }
-
-    .pics {
-        display: none;
-    }
-
-    .service {
-        display: none;
-    }
-
-    .cards {
-        height: 1000px;
-        margin-bottom: 10px;
-    }
-
-    .profile {
-        display: none;
-    }
-
-    .profile i {
-        margin-top: 5px;
-    }
-
-    .welcome {
-        background: #343332;
-        color: #fff;
-        font-size: 13px;
-    }
-}
 
 
 @media (max-width:768px) {
@@ -248,9 +210,7 @@ ul li a {
         margin-right: 140px;
     }
 
-    .add_newquote {
-        display: none;
-    }
+
 
 }
 
