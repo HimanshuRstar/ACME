@@ -5,6 +5,78 @@
 // window.onload = onloadClear();
 
 
+let auth_token;
+
+$(document).ready(function () {
+    $.ajax({
+        type: 'get',
+        url: 'https://www.universal-tutorial.com/api/getaccesstoken',
+        success: function (data) {
+            auth_token = data.auth_token;
+            countryData(data.auth_token);
+        },
+        error: function (error) {
+            console.log('Page does not exist', error);
+        },
+        headers: {
+            "Accept": "application/json",
+            "api-token": "AfBhlqD5H67zSC2O6x8ii1BWf6aKhiT7ulAPD90Y4Z7jIRO1NsZRpEKfRb_4tyvm98I",
+            "user-email": "himanshukathuria1997@gmail.com"
+        }
+    })
+
+    $('#country').change(function () {
+        stateData();
+    })
+    // $('#state').change(function () {
+    //     cityData();
+    // })
+});
+
+
+function countryData(auth_token) {
+    $.ajax({
+        type: 'get',
+        url: 'https://www.universal-tutorial.com/api/countries/',
+        success: function (data) {
+            data.forEach(element => {
+                $('#country').append('<option value = "' + element.country_name + '">' + element.country_name + '</option>')
+            });
+            // stateData(auth_token);
+        },
+        error: function (error) {
+            console.log('Page does not exist', error);
+        },
+        headers: {
+            "Authorization": "Bearer " + auth_token,
+            "Accept": "application/json"
+        }
+    })
+}
+
+
+function stateData() {
+    let countryName = $('#country').val();
+    $.ajax({
+        type: 'get',
+        url: 'https://www.universal-tutorial.com/api/states/' + countryName,
+        success: function (data) {
+            $('#state').empty();
+            data.forEach(element => {
+                $('#state').append('<option value = "' + element.state_name + '">' + element.state_name + '</option>')
+            });
+            // cityData(auth_token);
+        },
+        error: function (error) {
+            console.log('Page does not exist', error);
+        },
+        headers: {
+            "Authorization": "Bearer " + auth_token,
+            "Accept": "application/json"
+        }
+    })
+}
+
 let quotesArr = [];
 
 let myKeysValues = window.location.search;
@@ -327,3 +399,29 @@ function productFormSubmit() {
         });
     }, false);
 })();
+
+
+//API call
+
+
+// function cityData() {
+//     let stateName = $('#state').val();
+//     $.ajax({
+//         type: 'get',
+//         url: 'https://www.universal-tutorial.com/api/cities/' + stateName,
+//         success: function (data) {
+//             $('#city').empty();
+//             data.forEach(element => {
+//                 $('#city').append('<option value = "' + element.city_name + '">' + element.city_name + '</option>')
+//             });
+//         },
+//         error: function (error) {
+//             console.log('Page does not exist', error);
+//         },
+//         headers: {
+//             "Authorization": "Bearer " + auth_token,
+//             "Accept": "application/json"
+//         }
+//     })
+// }
+
