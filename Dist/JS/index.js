@@ -3,10 +3,10 @@
 //     document.querySelector('.down-arrow').classList.toggle('rotate180');
 // });
 
-function onloadClear() {
-    localStorage.clear();
-}
-window.onload = onloadClear();
+// function onloadClear() {
+//     localStorage.clear();
+// }
+// window.onload = onloadClear();
 
 
 let quotesArr = [];
@@ -27,7 +27,6 @@ function Quote(id, name, createdDate, status, createdBy) {
     this.createdBy = createdBy;
     return this;
 }
-
 
 function Display() {
 
@@ -62,6 +61,7 @@ Display.prototype.clear = function () {
     let quotesForm = document.getElementById("quotesForm");
     quotesForm.reset();
 }
+
 
 function quotesFormSubmit() {
     // console.log('you have submitted quotes form');
