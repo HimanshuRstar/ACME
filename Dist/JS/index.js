@@ -7,6 +7,7 @@
 
 let auth_token;
 
+
 $(document).ready(function () {
     $.ajax({
         type: 'get',
