@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="Dist/CSS/styles.css" />
 </head>
 
-<body>
+<body onload="getQuotes()">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2">
@@ -111,11 +111,11 @@
                         </div>
                         <span class="col-md-2 mt-1 pt-3">
                             <div class="filter_btn">
-                                <button class="btn bg-white text-black btn-secondary dropdown-toggle " type="button"
-                                    id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"
-                                    style="margin-left: 100%;">
-                                    Filter By Status
-                                </button>
+                                <select class="btn bg-white text-black btn-secondary dropdown-toggle " id="selectField">
+                                    <option value="all">Filter by Status</option>
+                                    <option value="accepted">Accepted</option>
+                                    <option value="denied">Denied</option>
+                                </select>
                             </div>
                         </span>
                         <span class=" col-md-2 mt-1 pt-3 ">
@@ -140,7 +140,7 @@
 
                     <table class="table table-striped table-hover table-bordered Quotes mt-2" id="tableQuotes">
                         <thead>
-                            <tr>
+                            <tr id="headRow">
                                 <th scope="col">Quote Name</th>
                                 <th scope="col">Created Date</th>
                                 <th scope="col">Status</th>
@@ -193,7 +193,7 @@
 
                         <!-- Form Starting Here -->
 
-                        <form id="quotesForm" class="needs-validation" onsubmit=" return false;">
+                        <form id="quotesForm" class="needs-validation">
                             <div class="modal-body">
 
                                 <div class="row bg-light fw-bold" style="margin-left: 10px;">
@@ -203,7 +203,7 @@
 
                                 <div class="row mt-4">
                                     <div class="col-md-6 mt-1">Quote Number
-                                        <div></div>
+                                        <input type="number" style="margin-left: 93px;" id="quoteId">
                                     </div>
 
                                     <div class="col-md-6">Created By: <span style="color: red;">*</span>
@@ -349,7 +349,7 @@
                             <!-- Modal Footer -->
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary" id="save">Create
+                                <button type="submit" class="btn btn-primary" id="save" onclick="insertQuote()">Create
                                     Quote</button>
                             </div>
                         </form>
@@ -368,9 +368,9 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
-    <!-- <script>
-    showData()
-</script> -->
+    <script>
+
+    </script>
 </body>
 
 

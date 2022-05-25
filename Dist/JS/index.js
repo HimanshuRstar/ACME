@@ -1,13 +1,7 @@
-
-// function onloadClear() {
-//     localStorage.clear();
-// }
-// window.onload = onloadClear();
-
+// const req = require("express/lib/request");
+// const req = require("express/lib/request");
 
 let auth_token;
-
-
 $(document).ready(function () {
     $.ajax({
         type: 'get',
@@ -34,7 +28,6 @@ $(document).ready(function () {
     // })
 });
 
-
 function countryData(auth_token) {
     $.ajax({
         type: 'get',
@@ -54,7 +47,6 @@ function countryData(auth_token) {
         }
     })
 }
-
 
 function stateData() {
     let countryName = $('#country').val();
@@ -78,15 +70,135 @@ function stateData() {
     })
 }
 
+function getQuotes() {
+    const request = new XMLHttpRequest();
+
+    request.open('GET', 'http://localhost:3000/quotes');
+    request.send();
+
+    request.addEventListener('load', function () {
+        if (request.status == 200) {
+            const data = JSON.parse(this.responseText);
+            console.log("abcd", data);
+            // console.log("name", data.quoteName);
+            for (let i = 0; i < data.length; i++) {
+                let tableString = `<tr>
+                                <td scope="row" position = "quoteName">${data[i].quoteName}</td>
+                                <td>${data[i].createdDate}</td>
+                                <td postion = "status">${data[i].status}</td>
+                                <td>${data[i].createdBy}</td>
+                                <td><button type="button" id = quotesViewBtn_${data[i].quoteId} class="btn btn-primary quotes_details"
+                                        onclick="viewBtnClick(${data[i].quoteId});" >View
+                                        Details</button></td>
+                            </tr>`;
+                tableBodyQuotes.innerHTML += tableString;
+            }
+        }
+        else {
+            alert("404 Not Found");
+        }
+    })
+};
+
+
+function showDataById(quoteId) {
+
+    let myKeysValues = window.location.search;
+    let urlParam = new URLSearchParams(myKeysValues);
+    let param = urlParam.get('quoteId');
+    quoteId = param;
+
+    console.log(param);
+
+    const request = new XMLHttpRequest();
+    request.open('GET', `http://localhost:3000/quotes/${quoteId}`);
+    request.send();
+
+    request.addEventListener('load', function () {
+
+        const data = JSON.parse(this.responseText);
+        console.log("abcd", data);
+
+        let quoteCredName = document.getElementById("quoteCredName");
+        let quoteCreated = document.getElementById("quoteCreated");
+        let quoteStatus = document.getElementById("quoteStatus");
+        let quotedCreatedDate = document.getElementById("quotedCreatedDate");
+
+        quoteCredName.textContent = data[0].quoteName;
+        quoteCreated.textContent = data[0].createdDate;
+        quoteStatus.textContent = data[0].status;
+        quotedCreatedDate.textContent = data[0].createdBy;
+    });
+};
+
+
+function insertQuote() {
+    const request = new XMLHttpRequest();
+    request.open('POST', `http://localhost:3000/quotes`)
+    console.log(request);
+
+    request.setRequestHeader('Content-Type', 'application/json; charset= UTF-8')
+
+    let quoteId = document.getElementById('quoteId').value;
+    let quoteName = document.getElementById('quoteName').value;
+    let createdDate = document.getElementById('createdDate').value;
+    let status = document.getElementById('status');
+    let displayStatus = status.options[status.selectedIndex].text;
+    let createdBy = document.getElementById('createdBy').value;
+
+    let body = JSON.stringify({
+        quoteId: quoteId,
+        quoteName: quoteName,
+        createdDate: createdDate,
+        status: displayStatus,
+        createdBy: createdBy
+    })
+
+    request.send(body);
+}
+
+function myFunction() {
+    var x = document.getElementById("showDetailsEdit");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function editQuote(quoteId) {
+
+    let myKeysValues = window.location.search;
+    let urlParam = new URLSearchParams(myKeysValues);
+    let param = urlParam.get('quoteId');
+    quoteId = param;
+
+    const request = new XMLHttpRequest();
+    request.open('PUT', `http://localhost:3000/quotes/${quoteId}`)
+    request.setRequestHeader('Content-Type', 'application/json; charset= UTF-8')
+
+    let quoteName = document.getElementById("quoteNameEdit").value;
+    let status = document.getElementById("statusEdit");
+    let displayStatus = status.options[status.selectedIndex].text;
+    let createdBy = document.getElementById("createdByEdit").value;
+
+    let body = JSON.stringify({
+        quoteName: quoteName,
+        status: displayStatus,
+        createdBy: createdBy
+    })
+    request.send(body);
+    console.log("test", body);
+}
+
 let quotesArr = [];
 
-let myKeysValues = window.location.search;
+// let myKeysValues = window.location.search;
 // console.log("Keys & Values:", myKeysValues);
 
-let urlParam = new URLSearchParams(myKeysValues);
-let param = urlParam.get('quoteId');
-console.log(param);
-
+// let urlParam = new URLSearchParams(myKeysValues);
+// let param = urlParam.get('quoteId');
+// console.log(param);
 
 function Quote(id, name, createdDate, status, createdBy) {
     this.id = id;
@@ -108,22 +220,22 @@ let viewBtnClick = function (itemId) {
 }
 
 Display.prototype.addTable = function (quote) {
-    tableBodyQuotes = document.getElementById("tableBodyQuotes");
-    tableBodyQuotes.innerHTML = "";
+    // tableBodyQuotes = document.getElementById("tableBodyQuotes");
+    // tableBodyQuotes.innerHTML = "";
 
-    for (let i = 0; i < quotesArr.length; i++) {
+    // for (let i = 0; i < quotesArr.length; i++) {
 
-        let tableString = `<tr>
-                            <td scope="row">${quotesArr[i].name}</th>
-                            <td>${quotesArr[i].createdDate}</td>
-                            <td>${quotesArr[i].status}</td>
-                            <td>${quotesArr[i].createdBy}</td>
-                            <td><button type="button" id = quotesViewBtn_${quotesArr[i].id} class="btn btn-primary quotes_details"
-                                    onclick="viewBtnClick(${quotesArr[i].id});" >View
-                                    Details</button></td>
-                        </tr>`;
-        tableBodyQuotes.innerHTML += tableString;
-    }
+    //     let tableString = `<tr>
+    //                         <td scope="row">${quotesArr[i].name}</th>
+    //                         <td>${quotesArr[i].createdDate}</td>
+    //                         <td>${quotesArr[i].status}</td>
+    //                         <td>${quotesArr[i].createdBy}</td>
+    //                         <td><button type="button" id = quotesViewBtn_${quotesArr[i].id} class="btn btn-primary quotes_details"
+    //                                 onclick="viewBtnClick(${quotesArr[i].id});" >View
+    //                                 Details</button></td>
+    //                     </tr>`;
+    //     tableBodyQuotes.innerHTML += tableString;
+    // }
 }
 
 Display.prototype.clear = function () {
@@ -178,7 +290,8 @@ function quotesFormSubmit() {
                     event.stopPropagation();
                 } else {
                     // showData()
-                    quotesFormSubmit()
+                    insertQuote();
+                    quotesFormSubmit();
                     $('#exampleModal').modal('hide')
                 }
 
@@ -189,6 +302,19 @@ function quotesFormSubmit() {
 })();
 
 
+$(document).ready(function () {
+    let rows = $("table #tableQuotes")
+    $('#selectField').on("change", () => {
+        let selected = this.value;
+        if (selected != "all") {
+            rows.filter("[position = " + selected + "]").show();
+            rows.not("[position = " + selected + "]").hide();
+            var visibleRows = rows.filter("[position = " + selected + "]");
+        } else {
+            rows.show();
+        }
+    })
+})
 
 // window.onload = function () {
 
@@ -217,7 +343,6 @@ function showQuoteCred() {
     quoteStatus.textContent = displayAllData[param].status;
     quotedCreatedDate.textContent = displayAllData[param].createdBy;
 }
-
 
 let products =
     [
@@ -313,7 +438,6 @@ let products =
         }
     ]
 
-
 products.forEach((product) => {
     let option = document.createElement("option");
 
@@ -352,6 +476,7 @@ Display.prototype.add = function (product) {
     // console.log("descriptionnnn", product.description);
     tableBody.innerHTML += tableString;
 }
+
 
 
 Display.prototype.clear = function () {
@@ -400,6 +525,7 @@ function productFormSubmit() {
         });
     }, false);
 })();
+
 
 
 //API call

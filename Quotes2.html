@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="Dist/CSS/styles.css" />
 </head>
 
-<body onload="showQuoteCred();">
+<body onload="showDataById();">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2">
@@ -109,6 +109,7 @@
                             <p class="pt-2">Accounts test for community</p>
                         </div>
                         <div class="col-md-4 mt-1 pt-3">
+
                             <button type="button" class="btn btn-primary convert_order"
                                 onclick="location.href='quotesAdd.html'">Convert to Order</button>
                         </div>
@@ -133,9 +134,48 @@
                                 <span>Created By:</span><br>
                                 <span class="info fw-bolder" id="quotedCreatedDate"></span>
                             </div>
+                            <div class="col-md-9">
+                                <button type="button" class="btn btn-primary " onclick="myFunction()">Edit</button>
+                            </div>
                         </div>
                     </div>
-
+                    <br>
+                    <form>
+                        <div class="container-fluid quotes_list p-2" id="showDetailsEdit">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <span>Quote Name:</span><br>
+                                    <input type="text" id="quoteNameEdit" required>
+                                </div>
+                                <div class="col-md-3">
+                                    <span>Oracle Creation Date:</span><br>
+                                    <input type="date" id="quoteDateEdit">
+                                </div>
+                                <div class="col-md">
+                                    <span>Status:</span><br>
+                                    <select name="" id="statusEdit" required>
+                                        <option value="">Draft</option>
+                                        <option value="">Needs Review</option>
+                                        <option value="">In Review</option>
+                                        <option value="">Approved</option>
+                                        <option value="">Rejected</option>
+                                        <option value="">Presented</option>
+                                        <option value="">Accepted</option>
+                                        <option value="">Denied</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row pt-3">
+                                <div class="col-md-3">
+                                    <span>Created By:</span><br>
+                                    <input type="text" id="createdByEdit" required>
+                                </div>
+                                <div class="col-md-9">
+                                    <button type="button" class="btn btn-primary" onclick="editQuote()">Update</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                     <div class="mt-4 fw-bold d-flex align-items-center">Related Products
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#exampleModal" style="margin-left: 81%; margin-bottom: 5px;">
@@ -151,7 +191,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
-                                <form id="productForm" class="needs-validation" onsubmit=" return false;">
+                                <form id="productForm" class="needs-validation" onsubmit="return false;">
                                     <div class="modal-body my-3">
                                         <!-- <div class="row my-3">
                                         <div class="col-md-6">
@@ -171,7 +211,6 @@
                                             <div class="col-sm-10">
 
                                                 <select id="slctProducts" class="form-control" required>
-
                                                     <option value="">Choose Product</option>
                                                 </select>
                                                 <div id="match-list"></div>
@@ -195,8 +234,8 @@
                                             <label for="quantity" class="col-sm-2 col-form-label">Quantity:
                                             </label>
                                             <div class="col-sm-10">
-                                                <input type="number" class="form-control" id="quantity" value="1"
-                                                    required>
+                                                <input type="number" min="0" class="form-control" id="quantity"
+                                                    value="1" required>
                                             </div>
                                         </div>
 
@@ -207,7 +246,6 @@
                                         </div>
                                 </form>
                             </div>
-
                         </div>
                     </div>
                 </div>

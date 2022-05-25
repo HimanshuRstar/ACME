@@ -218,12 +218,7 @@ ul li a {
         margin-right: 140px;
     }
 
-
-
 }
-
-
-
 
 .pic1 {
     height: 570px;
@@ -433,4 +428,8 @@ td {
 .matchedItems:hover {
     background: #F0F0F0;
     cursor: pointer;
+}
+
+#showDetailsEdit {
+    display: none;
 }
