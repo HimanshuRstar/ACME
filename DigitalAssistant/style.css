@@ -1,0 +1,380 @@
+.oda-chat-icon {
+    border-radius: 50%;
+}
+
+.oda-chat-widget.oda-chat-flex.oda-chat-col {
+    width: 420px !important;
+    /* height: 800px; */
+}
+
+.oda-chat-wrapper button.oda-chat-button {
+    background: none;
+    width: 100px;
+    height: 100px;
+    cursor: initial;
+    margin-bottom: 70px;
+}
+
+.oda-chat-wrapper button.oda-chat-button:hover {
+    background: none;
+}
+
+.oda-chat-wrapper button img {
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+
+}
+
+.oda-chat-wrapper button img:hover {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.oda-chat-header-button-icon {
+    height: 30px;
+    width: 30px;
+}
+
+.oda-chat-wrapper .oda-chat-header {
+    padding: 0 4px 0 10px;
+}
+
+.oda-chat-wrapper .oda-chat-card-actions,
+.oda-chat-wrapper .oda-chat-message-actions,
+.oda-chat-wrapper .oda-chat-message-global-actions {
+    margin-top: 15px;
+    align-items: center;
+}
+
+.oda-chat-wrapper button {
+    color: #3b91f7;
+    border: 1px solid #E0DECA
+}
+
+.oda-chat-wrapper button:hover {
+    background: black
+}
+
+.oda-chat-relative-timestamp {
+    display: none;
+}
+
+.menu {
+    /* display: none; */
+    color: #0645ad;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.oda-chat-wrapper .oda-chat-header .oda-chat-header-info-wrapper .oda-chat-title {
+    color: #4a4a4a !important;
+}
+
+.oda-chat-wrapper .oda-chat-header .oda-chat-header-info-wrapper .oda-chat-connection-status {
+    color: #4a4a4a !important;
+}
+
+
+.oda-chat-wrapper .oda-chat-icon-wrapper .oda-chat-message-icon {
+    height: 32px;
+    width: 32px;
+}
+
+.oda-chat-wrapper .oda-chat-dialog-wrapper .oda-chat-prompt-banner {
+    top: 61%;
+    animation: Slide_Up 1s ease;
+}
+
+.oda-chat-wrapper .oda-chat-dialog-wrapper .feedbackFormAfterPositive {
+    top: 0;
+    height: 100%;
+    max-height: unset;
+    display: block;
+}
+
+.oda-chat-wrapper .oda-chat-dialog-wrapper .feedbackForm {
+    height: 100%;
+}
+
+.oda-chat-wrapper .oda-chat-dialog-wrapper .feedbackFormAfterPositive .feedbackFormBtns .button-focus {
+    transition: all 0.3s ease;
+    background-color: #000;
+    color: #fff;
+}
+
+/* .oda-chat-dialog-wrapper .oda-chat-end-conversation-prompt .feedbackForm {
+    top: 59%;
+    animation: Slide_Up 1s ease;
+} */
+
+@keyframes Slide_Up {
+    0% {
+        transform: translateY(250px);
+    }
+
+    100% {
+        transition: translateY(0);
+    }
+}
+
+
+.oda-chat-prompt-banner .feedbackForm {
+    height: 40%;
+}
+
+/* .oda-chat-prompt-banner-description {
+    display: none;
+} */
+
+.oda-chat-wrapper .yesBtn {
+    border-radius: 7px;
+    width: 100%;
+    background: #101010 !important;
+    color: white !important;
+    display: inline-block;
+    text-align: center;
+    transition: ease-in-out 0.3s
+}
+
+.feedbackText {
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.oda-chat-wrapper .yesBtn:hover {
+    transition: ease-in-out 0.3s;
+    opacity: 0.8;
+}
+
+
+.oda-chat-wrapper .noBtn {
+    align-self: center;
+    background: transparent !important;
+    color: #000;
+    border: none;
+}
+
+.oda-chat-wrapper .noBtn:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating {}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars {
+    height: 60px;
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars input {
+    display: none;
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars label {
+    margin-top: 25px;
+    padding-left: 12px;
+    float: right;
+    font-size: 22px;
+    color: black;
+    text-shadow: 1px 1px #bbb;
+    cursor: pointer;
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars label span {
+    display: none;
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars label:nth-child(2):before {
+    content: '😍';
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars label:nth-child(2):hover span {
+    display: block;
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars label:nth-child(4):before {
+    content: '😎';
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars label:nth-child(4):hover span {
+    display: block;
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars label:nth-child(6):before {
+    content: '😄';
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars label:nth-child(6):hover span {
+    display: block;
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars label:nth-child(8):before {
+    content: '😒';
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars label:nth-child(8):hover span {
+    display: block;
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars label:nth-child(10):before {
+    content: '😠';
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars label:nth-child(10):hover span {
+    display: block;
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars input:checked~label {
+    color: gold;
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars label:hover {
+    transform: scale(1.2);
+}
+
+/* .oda-chat-wrapper .oda-chat-flex .rating .stars:not(:checked)>label:hover,
+.oda-chat-wrapper .oda-chat-flex .rating .stars:not(:checked)>label:hover~label {
+    color: gold;
+} */
+
+/* .result:before {
+    font-weight: 500;
+    position: absolute;
+    content: '';
+    left: 37%;
+    top: 68%;
+    font-size: 16px;
+    display: none;
+} */
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars input:checked~.result:before {
+    display: block;
+}
+
+/* .oda-chat-wrapper .oda-chat-flex .rating .stars #five:checked~.result:before {
+    content: "I Love It! 😍";
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars #four:checked~.result:before {
+    content: "I Like It! 😎";
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars #three:checked~.result:before {
+    content: "It was Good. 😄";
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars #two:checked~.result:before {
+    content: "I Don't Like it! 😒";
+}
+
+.oda-chat-wrapper .oda-chat-flex .rating .stars #one:checked~.result:before {
+    content: "It was Bad! 😠";
+} */
+
+.skipAndClose {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    /* margin-right: 10px; */
+    text-align: center;
+}
+
+.feedbackForm {
+    display: none;
+}
+
+.feedbackFormAfterPositiveHide {
+    display: none;
+}
+
+.feedbackFormAfterNegativeHide {
+    display: none;
+}
+
+.oda-chat-wrapper .oda-chat-header-actions .oda-chat-header-button:nth-child(2) {
+    display: none;
+}
+
+.closeBtn {
+    margin-right: 20px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+
+.closeWidget {
+    display: none;
+}
+
+.oda-chat-dialog-wrapper .oda-chat-end-conversation-prompt .closeWidget {
+    display: none;
+}
+
+.additionalFeedback {
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.feedbackFormBtns textarea {
+    height: 150px !important;
+    width: 100% !important;
+}
+
+.feedbackLabel {
+    /* display: block; */
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.wrapper {
+    margin-left: 40px;
+}
+
+.wrapper .option {
+    background: #fff;
+    width: 30%;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 10px;
+    border: 2px solid lightgrey;
+    transition: all 0.3s ease;
+    color: #3b91f7;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper input[type="radio"] {
+    display: none;
+}
+
+.wrapper #option-1:checked:checked~.option-1,
+#option-2:checked:checked~.option-2 {
+    border-color: #000;
+    background: #000;
+}
+
+.wrapper #option-1:checked:checked~.option-1 span,
+#option-2:checked:checked~.option-2 span {
+    color: #fff;
+}
+
+.feedbackFormBtns .feedbackCharRemaining {
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: right;
+}

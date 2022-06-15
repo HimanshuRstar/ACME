@@ -73,7 +73,7 @@ function stateData() {
 function getQuotes() {
     const request = new XMLHttpRequest();
 
-    request.open('GET', 'http://localhost:3000/quotes');
+    request.open('GET', 'http://localhost:3001/quotes');
     request.send();
 
     request.addEventListener('load', function () {
@@ -111,7 +111,7 @@ function showDataById(quoteId) {
     console.log(param);
 
     const request = new XMLHttpRequest();
-    request.open('GET', `http://localhost:3000/quotes/${quoteId}`);
+    request.open('GET', `http://localhost:3001/quotes/${quoteId}`);
     request.send();
 
     request.addEventListener('load', function () {
@@ -134,7 +134,7 @@ function showDataById(quoteId) {
 
 function insertQuote() {
     const request = new XMLHttpRequest();
-    request.open('POST', `http://localhost:3000/quotes`)
+    request.open('POST', `http://localhost:3001/quotes`)
     console.log(request);
 
     request.setRequestHeader('Content-Type', 'application/json; charset= UTF-8')
@@ -174,7 +174,7 @@ function editQuote(quoteId) {
     quoteId = param;
 
     const request = new XMLHttpRequest();
-    request.open('PUT', `http://localhost:3000/quotes/${quoteId}`)
+    request.open('PUT', `http://localhost:3001/quotes/${quoteId}`)
     request.setRequestHeader('Content-Type', 'application/json; charset= UTF-8')
 
     let quoteName = document.getElementById("quoteNameEdit").value;
@@ -300,7 +300,6 @@ function quotesFormSubmit() {
         });
     }, false);
 })();
-
 
 $(document).ready(function () {
     let rows = $("table #tableQuotes")

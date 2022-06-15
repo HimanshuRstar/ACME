@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ODA Web SDK 22.02</title>
+    <style>
+        body {
+            font-family: "Oracle Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            font-size: 1rem;
+            line-height: 1.4;
+            margin: 20px auto;
+            padding: 0 20px;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: #f5f4f2;
+            color: #312d2a;
+        }
+
+        body.dark {
+            background-color: #201e1c;
+            color: #f1fefd;
+        }
+
+        .layout {
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            margin: 0 auto;
+            max-width: 100%;
+            padding: 0 1rem;
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .content {
+                max-width: 750px;
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 200;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 200;
+        }
+
+        em {
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #00688c;
+        }
+
+        .dark a {
+            color: #5fa2ba;
+        }
+
+        a:visited {
+            color: #025e7e;
+        }
+
+        .dark a:visited {
+            color: #79b1c6;
+        }
+
+        code {
+            color: #9d4434;
+        }
+
+        .dark code {
+            color: #dc7e6c;
+        }
+
+        code.unset {
+            color: unset;
+        }
+
+        .fw-600 {
+            font-weight: 600;
+        }
+
+        .onoffswitch {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            width: 90px;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .onoffswitch-checkbox {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .onoffswitch-label {
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid #999999;
+            border-radius: 20px;
+        }
+
+        .onoffswitch-inner {
+            display: flex;
+            width: 200%;
+            margin-left: -100%;
+            transition: margin 0.1s ease-in 0s;
+        }
+
+        .onoffswitch-inner:before,
+        .onoffswitch-inner:after {
+            display: block;
+            width: 50%;
+            height: 30px;
+            padding: 0;
+            line-height: 30px;
+            font-size: 14px;
+            color: #fcfbfa;
+            font-family: "Oracle Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        .onoffswitch-inner:before {
+            content: "DARK";
+            padding-left: 10px;
+            background-color: #025e7d;
+            color: #fcfbfa;
+        }
+
+        .onoffswitch-inner:after {
+            content: "LIGHT";
+            padding-right: 10px;
+            background-color: #3a3631;
+            color: #dc7e6c;
+            text-align: end;
+        }
+
+        .onoffswitch-switch {
+            display: block;
+            width: 32px;
+            margin: -1px;
+            background: #FFFFFF;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 56px;
+            border: 2px solid #999999;
+            border-radius: 20px;
+            transition: all 0.1s ease-in 0s;
+        }
+
+        .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+            margin-left: 0;
+        }
+
+        .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="layout">
+        <main class="content">
+            <hgroup>
+                <h1>Oracle Digital Assistant Native Client SDK for Web</h1>
+                <h2>Release 22.02</h2>
+            </hgroup>
+            <p>We are thrilled to share the 22.02 release of the Oracle Digital Assistant Native Client SDK for Web.
+                This time it's  refreshed with a new modern design with UX improvements and support for default client responses.
+            </p>
+            <section>
+                <h3>What's New</h3>
+                <ul>
+                    <li>
+                        <strong>Redwood Design</strong> - We're happy
+                        to introduce the new Oracle standard for conversation design. We've redesigned the chat experience from scratch to improve the usability and the look and feel
+                        of the interface while still retaining the customization that we've always provided.
+                        <p>Here are some highlights:</p>
+                        <ul>
+                            <li><em>Header Actions</em> - To keep the chat header clean and focused, the chat header actions are now collapsed into a menu button when there are three or more action buttons. 
+                                <p>The multi lang selection option has been converted from a select input to a  dropdown menu to free up space. When in the collapsed mode, the language selection appears as a 
+                                    sub-menu of the header actions menu.</p>
+                                <p>You can disable this feature by setting  <code>enableHeaderActionCollapse</code>
+                                    to <code>false</code>.</p></li>
+                            <li><em>Message Blocks</em> - To eliminate repetitive information and keep the transcript area clean, all message bubbles from the same sender (the skill or the user) that are sent within 10 seconds of each other are organized into a message block with a single avatar and timestamp.</li>
+                            <li><em>Timestamps</em> - We are expanding the <code>timestampMode</code> to support more possible values of 
+                                <code>none</code>, <code>default</code>, <code>relative</code> (the default mode) and <code>absolute</code>.
+<p>If you don't want  to display any timestamps, you can set the <code>timestampMode</code> to <code>none</code>. Because this   eliminates 
+                                    the need of setting the additional <code>enableTimestamp</code> setting, we have deprecated the <code>enableTimestamp</code> 
+                  setting.</p>
+                                <p>We have also updated the default timestamp format to a shorter form. For example: <code>Thu Mar 10, 11:27 AM</code>.  
+                                    We have also removed the read check mark in the <code>absolute</code> timestamp mode because there's no need for this additional marker when users can already see that messages have been read.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Default Client Responses</strong> - We now support default client-side responses accompanied by the typing indicator when either the skill response has been delayed, or when there is no response from the skill at all.
+                        <p>This feature is controlled by the <code>enableDefaultClientResponse</code> boolean flag, which is set to
+                            <code>false</code> by default.
+                        </p>
+                        <p>If the user sends out the first message/query, but the skill (ODA) is not able to respond within the number of seconds set by the <code>defaultGreetingTimeout</code> 
+                            flag, the client displays a default greeting message that can be configured using the <code>defaultGreetingMessage</code> translation string.
+                        </p>
+                        <p>Next, the client checks again for the skill response. The client displays the skill's response if it has been received, but if it hasn't, then the client displays a wait message (configured with the <code>defaultWaitMessageInterval</code> translation string) at intervals set by the <code>defaultWaitMessageInterval</code> flag.
+                        </p>
+                        <p>When the wait for the skill response exceeds the threshold set by the <code>typingIndicatorTimeout</code> flag, the client displays a sorry response to the user and stops the typing indicator. You can configure the sorry response using the <code>defaultSorryMessage</code> translation string.
+                        </p>
+                        <p>Check out the user guide for the default timeouts and the corresponding default messages.</p>
+                    </li>
+                    <li>
+                        <strong>Widget Name Configuration</strong> - We have introduced a new <code>name</code> configuration setting. 
+                        This <code>name</code> configuration is used as a prefix to the CSS classes added to the widget.
+                        This uniquely identifies each widget if you have multiple instances of the chat widget on that same page, and helps us style them differently. The default value is <code>'oda-chat'</code>.
+
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>What's Improved</h3>
+                <ul>
+                    <li><strong>Conversation Begin Position</strong> - The default conversation start position (configured with <code>conversationBeginPosition</code>) is now <code>bottom</code>.</li>
+                    <li><strong>Improved Pre-Built Themes</strong> - All the pre-built themes, <code>DEFAULT</code>, <code>CLASSIC</code>, and <code>REDWOOD_DARK</code> 
+                        have been updated with new color shades with WCAG 2.1-compliant contrast.</li>
+                </ul>
+            </section>
+            <section>
+                <h3>What's Fixed</h3>
+                <ul>
+                    <li>
+                        <strong>Long-Polling fallback for CSP WebSocket block</strong> - If the chat WebSocket connections are blocked
+                        due to CSP restrictions, the connection will fallback to long polling if the <code>enableLongPolling</code> flag set to <code>true</code>.
+                    </li>
+                    <li>
+                        <strong>Prevent widget from going out of screen when it's positioned on left</strong> - If the widget is position on left side of
+                        the screen, the widget will expand to the right side of the button so that the widget is always visible.
+                    </li>
+                    <li>
+                        <strong>Scrolling/Styling fix for multiple instances of the widget</strong> - You can now use multiple instances of the widget
+                        and scroll them independently. You can also customize the two instances separately using the <code>name</code> configuration.
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </article>
+    <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="mode-switcher" tabindex="0" checked>
+        <label class="onoffswitch-label" for="mode-switcher">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+        </label>
+        <script>
+            const checkbox = document.getElementById('mode-switcher');
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    document.body.classList.remove('dark');
+                } else {
+                    document.body.classList.add('dark');
+                }
+            });
+        </script>
+    </div>
+
+</body>
+
+</html>

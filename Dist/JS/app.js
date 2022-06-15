@@ -5,7 +5,6 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-
 const pool = mysql.createPool({
     host: "localhost",
     user: "root",
@@ -28,7 +27,6 @@ app.get('/quotes', (req, res) => {
         }
     });
 });
-
 
 //Getting 1 qoute through the ID
 app.get('/quotes/:id', (req, res) => {
@@ -67,7 +65,7 @@ app.put('/quotes/:id', (req, res) => {
 });
 
 //PORT
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 app.listen(port, function () {
     console.log(`Server has started on ${port}`);
 });
